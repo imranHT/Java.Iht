@@ -1,0 +1,80 @@
+class Product{
+    private String productId;
+    private String name;
+    private double price;
+
+    public Product(String productId,String name, Double price){
+
+        this.productId = productId;
+        this.name = name;
+        this.price = price;
+    }
+
+    public String getProductId(){
+        return productId;
+    }
+    public String getName(){
+        return name;
+
+    }
+    public double getPrice(){
+        return price;
+    }
+}
+class Customer{
+    private String customerId;
+    private String name;
+    private String email;
+
+    public Customer(String customerId,String name, String email){
+        this.customerId = customerId;
+        this.name = name;
+        this.email = email;
+    }
+    public String getCustomerId(){
+        return customerId;
+    }
+    public String getName(){
+        return name;
+    }
+    public String getEmail(){
+        return email;
+    }
+}
+class Order{
+    private String orderId;
+    private Customer customer;
+    private Product product;
+    private int quantity;
+
+    public Order(String orderId, Customer customer, Product product ,int quantity){
+        this.orderId = orderId;
+        this.customer = customer;
+        this.product = product;
+        this.quantity = quantity;
+    }
+    public double calculateTotal(){
+        return product.getPrice() * quantity;
+    }
+
+    
+    public void printOrderDetails() {
+        System.out.println("Order ID: " + orderId);
+        System.out.println("Customer: " + customer.getName() + " (ID: " + customer.getCustomerId() + ")");
+        System.out.println("Product: " + product.getName() + " (ID: " + product.getProductId() + ")");
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Total Cost: Taka " + calculateTotal());
+       }
+}
+public class BusinessImran{
+    public static void main(String[] args) {
+        
+        Customer customer = new Customer("A01", "Imran", "imran@gg.com");
+        
+        Product product = new Product("TT65", "Smart Phone", 30000.00);
+
+        Order order = new Order("0011", customer, product, 1);
+
+        order.printOrderDetails();
+    }
+}
