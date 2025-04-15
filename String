@@ -1,0 +1,37 @@
+import java .util.Scanner;
+
+public class Julkar3{
+    static Scanner myScanner = new Scanner(System.in);
+    public static void main(String[]arths){
+
+        String myName;
+        prln("Enter Your Name is here = ");
+        myName = myScanner.nextLine();
+        prln(myName);
+        prln("the Numbers of your name is = "+myName.length());
+
+        if(myName.length()>20){
+            prln("Your name is to Long");
+        }else{
+            switch(myName.length()){
+                case 5:
+                prln("Your Name is Perfect");
+                break;
+                case 11:
+                prln("Your Name is Proper ");
+                break;
+                case 20:
+                prln("Your Name is Too Long");
+                break;
+
+                default:
+                prln("Your Name is ok Brow");
+                break;
+            }
+        }
+
+    }
+    static void prln(Object anyObject){
+        System.out.println(anyObject);
+    }
+}
