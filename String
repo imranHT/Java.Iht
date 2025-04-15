@@ -1,6 +1,6 @@
 import java .util.Scanner;
 
-public class Julkar3{
+public class Imran3{
     static Scanner myScanner = new Scanner(System.in);
     public static void main(String[]arths){
 
