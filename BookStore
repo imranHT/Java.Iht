@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class Bookstore{
+
+    static Scanner myScanner = new Scanner(System.in);
+
+  static String[]books = {"Java","C","Python","Web D"};
+  static final double studentDiscount = 0.3;
+  static final double teacherDiscount = 0.1;
+  static final double normalDiscount = 0.0;
+
+  public static void main(String[]aths){
+
+    prln("-----WELCOME TO OUER ONLINE BOOK PORTAL-----");
+    prln("Which Book you want::");
+    prln("--Search Here--^v");
+    String userchoice = myScanner.nextLine();
+
+    if(books[0].toLowerCase().equals(userchoice.toLowerCase())){
+        prln("you opted for  = "+books[0]+"Book");
+        calculatePrice(books[0]);
+    }
+    else if(books[1].toLowerCase().equals(userchoice.toLowerCase())){
+        prln("you opted for  = "+books[1]+"Book");
+        calculatePrice(books[1]);
+    }
+    else if(books[2].toLowerCase().equals(userchoice.toLowerCase())){
+        prln("you opted for  = "+books[2]+"Book");
+        calculatePrice(books[2]);
+    }
+    else if(books[3].toLowerCase().equals(userchoice.toLowerCase())){
+        prln("you opted for  = "+books[3]+"Book");
+        calculatePrice(books[3]);
+    }
+    else{
+        prln("Sorry We donont have the book");
+    }
+  }
+static void calculatePrice(String bookName){
+    prln("Are you Student,Teacher,Normal?\nAns::");
+    String answer = myScanner.nextLine();
+     double price = 500;
+     if(answer.toLowerCase().equals("student")){
+        price = price - (price*studentDiscount);
+        showPrice(price);
+     }
+     else if(answer.toLowerCase().equals("teacher")){
+        price = price - (price*teacherDiscount);
+        showPrice(price);
+     }
+     else if(answer.toLowerCase().equals("normal")){
+        price = price - (price * normalDiscount);
+        showPrice(price);
+     }
+     else{
+        prln("Sorry We cannot sarve you");
+     }
+
+ }
+ static void showPrice(double Price){
+    prln("Your total payble amount is  = "+Price);
+    prln("---Thank You ---");
+ }
+
+ static void prln(Object anyObject){
+    System.out.println(anyObject);
+ }
+}
