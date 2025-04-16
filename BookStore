@@ -1,68 +1,66 @@
 import java.util.Scanner;
-
-public class Bookstore{
-
+public class BookStore{
     static Scanner myScanner = new Scanner(System.in);
+    static String[]books  = {"Java","C","Python","Webdev"};
+    static final double studentDiscount = 0.3;
+    static final double teacherDiscount = 0.1;
+    static final double otherpersonDiscount = 0.0;
 
-  static String[]books = {"Java","C","Python","Web D"};
-  static final double studentDiscount = 0.3;
-  static final double teacherDiscount = 0.1;
-  static final double normalDiscount = 0.0;
+    public static void main(String[]args){
 
-  public static void main(String[]aths){
+   prln("---WELCOME TO TALUKDAR LIBRARY---");
+   prln("Which Book You Want--");
+   prln("Search in Here ^v^");
+   String userchoice = myScanner.nextLine();
 
-    prln("-----WELCOME TO OUER ONLINE BOOK PORTAL-----");
-    prln("Which Book you want::");
-    prln("--Search Here--^v");
-    String userchoice = myScanner.nextLine();
-
-    if(books[0].toLowerCase().equals(userchoice.toLowerCase())){
-        prln("you opted for  = "+books[0]+"Book");
-        calculatePrice(books[0]);
-    }
-    else if(books[1].toLowerCase().equals(userchoice.toLowerCase())){
-        prln("you opted for  = "+books[1]+"Book");
-        calculatePrice(books[1]);
-    }
-    else if(books[2].toLowerCase().equals(userchoice.toLowerCase())){
-        prln("you opted for  = "+books[2]+"Book");
-        calculatePrice(books[2]);
-    }
-    else if(books[3].toLowerCase().equals(userchoice.toLowerCase())){
-        prln("you opted for  = "+books[3]+"Book");
-        calculatePrice(books[3]);
-    }
-    else{
-        prln("Sorry We donont have the book");
-    }
-  }
-static void calculatePrice(String bookName){
-    prln("Are you Student,Teacher,Normal?\nAns::");
-    String answer = myScanner.nextLine();
-     double price = 500;
-     if(answer.toLowerCase().equals("student")){
-        price = price - (price*studentDiscount);
-        showPrice(price);
+   if(books[0].toLowerCase().equals(userchoice.toLowerCase())){
+    prln("You Opted for = "+books[0]+"_Book");
+    calculatePrice(books[0]);
+   }
+   else if(books[1].toLowerCase().equals(userchoice.toLowerCase())){
+    prln("You opted for = "+books[1]+"_Book");
+    calculatePrice(books[1]);
+   }
+   else if(books[2].toLowerCase().equals(userchoice.toLowerCase()))
+     {
+      prln("You Opted for = "+books[2]+"_Book");
+     calculatePrice(books[2]);
      }
-     else if(answer.toLowerCase().equals("teacher")){
+     else if(books[3].toLowerCase().equals(userchoice.toLowerCase())){
+     prln("You Opted for = "+books+"_Book");
+     calculatePrice(books[3]);
+     }else{
+        prln("Sorry We do not have the book!!");
+     }
+
+   }
+
+   static void calculatePrice(String bookName){
+    prln("Are you student,teacher,otherperson?\nAnswer Here ^v^-");
+    String answer = myScanner.nextLine();
+    double price = 500;
+
+    if(answer.toLowerCase().equals("student")){
+        price = price - (price*studentDiscount);
+        showPrice (price);
+    }
+    else if(answer.toLowerCase().equals("teacher")){
         price = price - (price*teacherDiscount);
         showPrice(price);
-     }
-     else if(answer.toLowerCase().equals("normal")){
-        price = price - (price * normalDiscount);
+    }else if(answer.toLowerCase().equals("otherperson")){
+        price = price-(price*otherpersonDiscount);
         showPrice(price);
-     }
-     else{
-        prln("Sorry We cannot sarve you");
-     }
-
- }
- static void showPrice(double Price){
-    prln("Your total payble amount is  = "+Price);
-    prln("---Thank You ---");
- }
-
- static void prln(Object anyObject){
+    }else{
+        prln("Sorry We cant help you");
+    }
+   }
+static void showPrice(double Price){
+    prln("Your Total payble amount is = "+Price);
+    prln("\n ---Book Make's You fly.Thank You---");
+}
+static void prln(Object anyObject){
     System.out.println(anyObject);
- }
+}
+
+    
 }
