@@ -16,3 +16,24 @@ public class Video4{
         System.out.println(anyoObject);
     }
 }
+---------------------------------------------------------------------
+Ex -2
+public class Video4{
+    public static void main(String[]args){
+
+        int[] numArray = new int[40];
+        int i  = 40;
+        while(i>0){
+            numArray[i-1] = (i-1)*2; //For using Operator(+,-,*,/)
+            i--;
+        }
+        while(i<40){
+            prln("Imran:["+i+"]:"+numArray[i]);
+            i++;
+        }
+
+    }
+    static void prln(Object anyObject){
+        System.out.println(anyObject);
+    }
+}
