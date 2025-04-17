@@ -1,0 +1,24 @@
+public class Video4{
+    public static void main(String[]args){
+
+        int a = 20;
+        int b = 30;
+        prln(a<b? a:b);
+        prln(compare(a,b));
+        
+    }
+    static int compare(int a, int b){
+        if(a<b){
+            return a;
+        }else {
+            return b;
+        }
+    }
+    static int calculateNumber(int number1, int number2){
+        number1 += number2;
+        return number1;
+    }
+    static void prln(Object anyObject){
+        System.out.println(anyObject);
+    }
+}
