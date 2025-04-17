@@ -1,0 +1,18 @@
+public class Video4{
+    public static void main(String[]args){
+
+        int[] numArray = new int[10];
+        int i = 10;
+        while(i>0){
+            numArray[i-1]=i-1;
+            i--;
+        }
+        while(i<10){
+            prln("ImranV^["+i+"]:"+numArray[i]);
+            i++;
+        }
+    }
+    static void prln(Object anyoObject){
+        System.out.println(anyoObject);
+    }
+}
