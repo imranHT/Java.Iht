@@ -1,0 +1,13 @@
+public class Video4b{
+    public static void main(String[] args) {
+        
+        for(int i=0; i<12; i++){
+            prln("imran = "+i);
+            //prln(i);
+        }
+    }
+    static void prln(Object anyObject){
+        System.out.println(anyObject);
+    }
+}
+-------------------------------------------------
