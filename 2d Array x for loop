@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Video4b{
+
+    static Scanner myScanner = new Scanner(System.in);
+    public static void main(String[]args){
+
+
+        int [][] twoDArray = new int[2][4];
+
+        prln("Enter Any Integer Number:");
+
+        for(int imran = 0; imran<2; imran++){
+            for(int hasan = 0; hasan<4; hasan++){
+                pr("twoDArray ["+imran+"]["+hasan+"]:");
+                twoDArray[imran][hasan] = myScanner.nextInt();
+            }
+
+        }
+        prln("\n Imran Here your Result :");
+        
+        for(int imran = 0; imran<2; imran++){
+            for(int hasan= 0; hasan<4; hasan++){
+          pr(twoDArray[imran][hasan]+"\t");
+         
+            }
+            prln("\n");
+        }
+    }
+    static void prln(Object anyObject){
+        System.out.println(anyObject);
+    }
+    static void pr(Object anyObject){
+        System.out.print(anyObject);
+    }
+
+}
