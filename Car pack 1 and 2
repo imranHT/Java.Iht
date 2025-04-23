@@ -23,3 +23,63 @@ public class Video5 {
   }
 }
 ------------------------------------------------------------------
+
+package Video5.java;
+
+public class Car {
+        public String manufacturerName;
+        private  String modelName;
+        private String carKeyValue;
+       
+        public int engineCC;
+        public float carWeight;
+      private float  fuelAmount;
+      final private float amountOFFuelConsumedPerSecond = 0.02f;
+
+        public Car(){
+            manufacturerName = new String();
+             modelName = new String();
+            engineCC = 2000;
+            carWeight = 0;
+            fuelAmount  = 30;
+        }
+        public Car(String carName){
+            manufacturerName = new String(carName);
+            modelName = new String();
+            engineCC = 0;
+            carWeight = 0;
+            fuelAmount  = 0;
+        }
+        public Car(String manu,String model,String key,int engineCC,float fuel){
+            manufacturerName = manu;
+            modelName = model;
+            carKeyValue = key;
+            this.engineCC = engineCC; 
+            fuelAmount = fuel;
+        }
+      public float presentAmountOfFuel(){
+
+              return fuelAmount;
+
+        }
+        public String getManufactureName(){
+            return manufacturerName;
+        }
+        public String getModelname(){
+            return modelName;
+        }
+        public boolean matchPassword(String userInput){
+            return userInput.equals(carKeyValue);
+        }
+        public void addFuel(float fuelAmount){
+            this.fuelAmount+=fuelAmount;
+        }
+        public void runForSecond(int timeInSecond){
+            float useFual = timeInSecond*amountOFFuelConsumedPerSecond;
+            fuelAmount-=useFual;
+        }
+    }
+    
+    
+
+
