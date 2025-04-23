@@ -1,0 +1,25 @@
+package Video5.java;
+
+public class Video5 {
+    
+  private int aNumber = 12;
+  private int anotherNumber;
+  static private Car ourCar  = new Car();
+  static private Car ourAnotherCar;
+  public static void main(String[] args) {
+    
+    ourAnotherCar = new Car("BMW","X7","Imran",2000,20);
+    System.out.println("Manufacturar:"+ourAnotherCar.manufacturerName);
+    System.out.println("Model:"+ourAnotherCar.getModelname());
+    System.out.println("PassWord ::"+ourAnotherCar.matchPassword("Imran"));
+    System.out.println("EngineCC:"+ourAnotherCar.engineCC);
+    System.out.println("AmountOfFuel:"+ourAnotherCar.presentAmountOfFuel()+"L");
+      ourAnotherCar.addFuel(2);
+      System.out.println("Amount of Fuel 2l:"+ourAnotherCar.presentAmountOfFuel());
+     
+      ourAnotherCar.runForSecond(40);
+      System.out.println("Amount of Fuel after driving for 60s::"+ourAnotherCar.presentAmountOfFuel());
+      
+  }
+}
+------------------------------------------------------------------
