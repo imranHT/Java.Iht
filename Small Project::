@@ -1,0 +1,72 @@
+package Imran.java;
+
+public class Exp1 {
+    private int Number = 20;
+    private int anotherNumber;
+    static private Exp1 myLaptop = new Exp1();
+    static private Exp2 myAnotherLaptop;
+    public static void main(String[] args) {
+        myAnotherLaptop = new Exp2("Hp","VivoBook",1612762108,"Intel core i9",4);
+        System.out.println("LaptopName::"+myAnotherLaptop.getLaptopName());
+        System.out.println("ModelName::"+myAnotherLaptop.getModelName());
+        System.out.println("IMEI_Number:"+myAnotherLaptop.getImeiNumber());
+        System.out.println("Processor_Name:"+myAnotherLaptop.getProcessorName());
+        System.out.println("Frequency_Speed:"+myAnotherLaptop.getFrequencySpeed());
+    }
+    
+}
+----------------------------------
+package Imran.java;
+
+public class Exp2 {
+    public String laptopName;
+    private String modelName;
+    private int imeiNumber;
+    public String processorName;
+    private float frequencySpeed;
+  
+
+    public Exp2(){
+        laptopName = "HP";
+        modelName = new String();
+        imeiNumber = 1612762108;
+        processorName = "i5";
+        frequencySpeed = 0;
+    
+    }
+    public Exp2(String laptopName){
+        laptopName = new String(laptopName);
+        modelName = new String();
+        imeiNumber = 1612762108;
+        processorName = new String();
+        frequencySpeed = 0;
+    }
+
+    public Exp2(String laptopName,String modelName,int imeiNumber,String processorName,float frequencySpeed){
+       this. laptopName = laptopName;
+       this. modelName = modelName;
+        this.imeiNumber = imeiNumber;
+       this. processorName = processorName;
+       this.frequencySpeed = frequencySpeed;
+    }
+    public String getLaptopName(){
+        return laptopName;
+    }
+    public float getFrequencySpeed(){
+        return frequencySpeed;
+    }
+
+     public String getModelName() {
+        return modelName;
+    }
+    public int getImeiNumber(){
+        return imeiNumber;
+    }
+    public String getProcessorName(){
+        return "Intel core i9";
+    }
+    
+    
+
+    
+}
