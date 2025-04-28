@@ -1,0 +1,40 @@
+package Imran.java;
+
+public class Im1 {
+    private int Number = 20;
+    private int anotherNumber;
+    static private Im1 myPhone = new Im1();
+    static private Im2 myAnotherPhone;
+    public static void main(String[] args) {
+        
+        myAnotherPhone = new Im2("Sumsung","S25 Ultra",8,512,"Snapdragon 8 elite",1122335566,4.5,565452);
+        prln("BrandName:"+myAnotherPhone.getBrandName());
+        prln("ModelName:"+myAnotherPhone.getModelName());
+        prln("RAMSize:"+myAnotherPhone.getRamSize());
+        prln("ROMSize:"+myAnotherPhone.getRomSize());
+        prln("ProcessorName:"+myAnotherPhone.getProcessorName());
+        prln("IMEI_code:"+myAnotherPhone.getImeiNumber());
+        prln("Frequency_Speed:"+myAnotherPhone.getFrequencySpeed());
+        prln("Activition_Key:"+myAnotherPhone.getActivitionCode());
+
+        prln("Imran Hasan");
+        prln("Software Engineear L1 at Google");
+        
+            
+        
+    }
+    static void prln(Object anyObject){
+        System.out.println(anyObject);
+    }
+        
+}
+//this.brandName = brandName;
+  //      this.modelName = modelName;
+    //    this.ramSize = ramSize;
+      //  this.romSize = romSize;
+        //this.processorName = processorName;
+        //this.imeiNumber = imeiNumber;
+        //this.frequencySpeed = frequencySpeed;
+        //this.activitionCode = activitionCode;
+___________________________________________________________________________________________
+
