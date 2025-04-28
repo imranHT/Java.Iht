@@ -38,3 +38,76 @@ public class Im1 {
         //this.activitionCode = activitionCode;
 ___________________________________________________________________________________________
 
+package Imran.java;
+
+public class Im2 {
+
+    public String brandName;
+    public String modelName;
+    public int ramSize;
+    public int romSize;
+    public String processorName;
+    private int imeiNumber;
+    public double frequencySpeed;
+    private int activitionCode;
+    
+    public Im2(){
+        brandName = new String();
+            modelName = new String();
+            ramSize = 8;
+            romSize = 512;
+            processorName = new String();
+            imeiNumber = 1122335566;
+            frequencySpeed = 0;
+            activitionCode = 565452;
+    }
+    public Im2(String brandName){
+        brandName = new String();
+            modelName = new String();
+            ramSize = 8;
+            romSize = 512;
+            processorName = new String();
+            imeiNumber = 1122335566;
+            frequencySpeed = 0;
+            activitionCode = 565452;
+
+    }
+    public Im2(String brandName,String modelName,int ramSize,int romSize, String processorName, int imeiNumber,double frequencySpeed,int activitionCode){
+
+        this.brandName = brandName;
+        this.modelName = modelName;
+        this.ramSize = ramSize;
+        this.romSize = romSize;
+        this.processorName = processorName;
+        this.imeiNumber = imeiNumber;
+        this.frequencySpeed = frequencySpeed;
+        this.activitionCode = activitionCode;
+    }
+    public String getBrandName(){
+        return brandName;
+    }
+    public String getModelName(){
+        return modelName;
+    }
+    public int getRamSize(){
+        return ramSize;
+    }
+    public int getRomSize(){
+        return romSize;
+    }
+    public String getProcessorName(){
+        return processorName;
+    }
+    public int getImeiNumber(){
+        return imeiNumber;
+
+    }
+    public double getFrequencySpeed(){
+        return frequencySpeed;
+    }
+    public int getActivitionCode(){
+        return activitionCode;
+    }
+
+
+}
