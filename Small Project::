@@ -6,7 +6,7 @@ public class Exp1 {
     static private Exp1 myLaptop = new Exp1();
     static private Exp2 myAnotherLaptop;
     public static void main(String[] args) {
-        myAnotherLaptop = new Exp2("Hp","VivoBook",1612762108,"Intel core i9",4);
+        myAnotherLaptop = new Exp2("Hp","VivoBook",1122554466,"Intel core i9",4);
         System.out.println("LaptopName::"+myAnotherLaptop.getLaptopName());
         System.out.println("ModelName::"+myAnotherLaptop.getModelName());
         System.out.println("IMEI_Number:"+myAnotherLaptop.getImeiNumber());
@@ -29,7 +29,7 @@ public class Exp2 {
     public Exp2(){
         laptopName = "HP";
         modelName = new String();
-        imeiNumber = 1612762108;
+        imeiNumber =1122554466 ;
         processorName = "i5";
         frequencySpeed = 0;
     
@@ -37,7 +37,7 @@ public class Exp2 {
     public Exp2(String laptopName){
         laptopName = new String(laptopName);
         modelName = new String();
-        imeiNumber = 1612762108;
+        imeiNumber = 1122554466;
         processorName = new String();
         frequencySpeed = 0;
     }
