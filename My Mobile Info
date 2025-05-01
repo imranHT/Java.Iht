@@ -17,6 +17,19 @@ public class Im1 {
         prln("Frequency_Speed:"+myAnotherPhone.getFrequencySpeed());
         prln("Activition_Key:"+myAnotherPhone.getActivitionCode());
 
+prln("\n");
+    
+        Im2 mythirdPhone = new Im2("NothingPhone","One",8,256,"Snapdragon AB888",1155225566,4,254565);
+        prln("BrandName:"+mythirdPhone.getBrandName());
+        prln("ModelName:"+mythirdPhone.getModelName());
+        prln("RAMSize:"+mythirdPhone.getRamSize());
+        prln("ROMSize:"+mythirdPhone.getRomSize());
+        prln("ProcessorName:"+mythirdPhone.getProcessorName());
+        prln("IMEI_code:"+mythirdPhone.getImeiNumber());
+        prln("Frequency_Speed:"+mythirdPhone.getFrequencySpeed());
+        prln("Activition_Key:"+mythirdPhone.getActivitionCode());
+//When Adding mor info then just follow this.
+
         prln("Imran Hasan");
         prln("Software Engineear L1 at Google");
         
