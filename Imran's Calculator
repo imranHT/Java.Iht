@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Scanner;;
 
 public class Calculator{
     public static void main(String[]arhs){
@@ -18,9 +18,9 @@ public class Calculator{
                 System.out.println("Exprasso");
                 break;
             }
-           System.out.println("Enter  num1");
+           System.out.println("Enter  a Number =>");
            double num1 = imran.nextDouble();
-           System.out.println("Enter num2");
+           System.out.println("Enter  Another Number =>");
            double num2 = imran.nextDouble();
 
            switch(choice){
