@@ -1,0 +1,49 @@
+import java.util.Scanner;
+//MAD LIBS game
+public class Bro3{
+
+  public static void main(String[] args) {
+    
+    Scanner imran = new Scanner(System.in);
+
+    String address;
+    double price;
+    String model;
+    String adjective1;
+    String adjective2;
+
+
+     System.out.println("Enter Address here:");
+     address = imran.nextLine();
+
+     System.out.println("Enter Budget :");
+     price = imran.nextDouble();
+     imran.nextLine();  
+
+     System.out.println("Enter Car Model :");
+     model = imran.nextLine();
+
+     System.out.println("Enter Adjective :");
+     adjective1 = imran.nextLine();
+
+     System.out.println("Enter Adjective :");
+     adjective2 = imran.nextLine();
+
+
+
+   System.out.println("I Want to "+address+" for buying a car .");
+   System.out.println("My Budget is "+price+ "cr");
+   System.out.println("I like "+model+"4 GT3 Series car.");
+   System.out.println("I feel "+adjective1+" for buying the car");
+   System.out.println("They treat me "+adjective2);
+
+   imran.close();
+
+  }
+}
+//output
+//I Want to BMW BD for buying a car .
+//My Budget is 1.5cr
+//I like M4 GT3 Series car.
+//I feel Very nice for buying the car
+//They treat me vary Nice
