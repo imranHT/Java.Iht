@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Bro3{
+
+    public static void main(String[] args) {
+        
+    Scanner imran = new Scanner(System.in);
+
+    double width = 0;
+    double hight = 0;
+    double area = 0;
+
+     System.out.println("Enter Width :");
+     width = imran.nextDouble();
+
+     System.out.println("Enter Hight :");
+     hight = imran.nextDouble();
+
+     area = width*hight;
+     System.out.println("The Area is :"+area);
+
+
+    }
+}
