@@ -1,0 +1,34 @@
+import java.util.Scanner;
+//Order app code
+public class Bro4{
+    public static void main(String[] args) {
+        
+        Scanner imran = new Scanner(System.in);
+
+       String item;
+           String flavors;
+                  double price;
+           int quantity;
+       double total;
+
+
+           System.out.println("Hello . Which item you want :");
+           item = imran.nextLine();
+
+           System.out.println("Which Flavors You Want to Eat :");
+           flavors = imran.nextLine();
+
+           System.out.println("Select the Price on the screen :");
+           price = imran.nextDouble();
+
+           System.out.println("How many do you Want : ");
+           quantity = imran.nextInt();
+
+           total = quantity * price;
+
+           System.out.println("You have bought " +quantity+ " "+flavors+ " "+item);
+           System.out.println("Your Total amount is : ৳ " +total+"Taka only");
+
+            imran.close();
+    }
+}
