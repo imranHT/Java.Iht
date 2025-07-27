@@ -1,0 +1,23 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Bro6{
+    public static void main(String[] args) {
+        
+        Random random = new Random();
+
+        int number;
+        boolean Imran;
+
+        number = random.nextInt(1,6);
+        Imran = random.nextBoolean();
+
+        System.out.println(number);
+
+        if(Imran){
+            System.out.println("Hello");
+        }else{
+            System.out.println("HI");
+        }
+    }
+}
