@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Bro6{
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+
+        double a;
+        double b;
+        double c;
+
+
+        System.out.println("Enter The Length of A:");
+        a = imran.nextDouble();
+
+        System.out.println("Enter The Lenght of B :");
+        b= imran.nextDouble();
+      
+
+        c = Math.sqrt(Math.pow(a,2)+ Math.pow(b,2));
+        System.out.println("The Lenght of C is :"+c);
+
+        imran.close();
+
+
+    }
+}
