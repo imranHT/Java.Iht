@@ -1,0 +1,22 @@
+public class Bro6{
+    public static void main(String[] args) {
+        
+       //System.out.println(Math.PI);
+       // System.out.println(Math.E);
+
+
+
+
+       double result;
+
+
+       result = Math.PI;
+       result = Math.sqrt(8);
+       result = Math.min(50, 60);
+       result = Math.max(60, 70);
+       result = Math.pow(2,5);
+       result = Math.acos(10);
+
+       System.out.println(result);
+    }
+}
