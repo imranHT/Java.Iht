@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Bro7{
+    public static void main(String[] args) {
+        
+        Scanner imran = new Scanner(System.in);
+
+        double mainMoney;
+        double rate;
+        int timeCompounded;
+        int year;
+        double amount;
+
+
+
+        System.out.println("Enter Your Main Money :");
+        mainMoney = imran.nextDouble() ;
+
+        System.out.println("Enter Interest Rate (in %) :");
+        rate = imran.nextDouble() / 100;
+
+        System.out.println("Enter Time Compunded :");
+        timeCompounded = imran.nextInt();
+
+        System.out.println("Enter How Many year :");
+        year = imran.nextInt();
+
+        amount = mainMoney * Math.pow(1 + rate/timeCompounded, timeCompounded*year);
+
+        System.out.println("The Amount After " +year+ " is "+amount);
+
+        imran.close();
+    }
+}
