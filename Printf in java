@@ -1,0 +1,16 @@
+public class Bro7{
+    public static void main(String[] args) {
+      //using printf  in java
+      
+        int a1 = 1;
+        int b1 = 23;
+        int c1 = 456;
+        int d1 = 7897;
+
+
+        System.out.printf("%04d\n",a1); //04 is add 1 or 2 ro 3 digite
+        System.out.printf("%04d\n",b1);
+        System.out.printf("%04d\n",c1);
+        System.out.printf("%04d\n",d1);
+    }
+}
