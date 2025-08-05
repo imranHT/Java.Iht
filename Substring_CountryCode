@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Bro9{
+    public static void main(String[] args) {
+        
+        Scanner imran = new Scanner(System.in);
+
+        String phone;
+        String countryCode;
+
+        System.out.println("Enter Your Phone Number::");
+
+        phone = imran.nextLine();
+
+        if(phone.length() >= 4){
+            countryCode = phone.substring(0, 4);
+            System.out.println("CountryCode is : "+countryCode);
+        }
+
+        else{
+            System.out.println("Invalid CountryCode");
+        }
+
+        imran.close();
+    }
+}
+
+//output
+Enter Your Phone Number::
+01745698522
+CountryCode is : 0174
