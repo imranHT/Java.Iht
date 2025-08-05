@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Bro9{
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+        String email;
+        String name;
+        String domain;
+
+        System.out.println("Enter Your Email Here :");
+
+        email = imran.nextLine();
+        name  = email.substring(0,email.indexOf("@"));
+        domain = email.substring(email.indexOf("@")+1); // +1 for hidding @ from domain name;
+
+        System.out.println(name);
+        System.out.println(domain);
+    }
+}
+//output
+Enter Your Email Here :
+imran@gmail.com
+imran
+gmail.com
