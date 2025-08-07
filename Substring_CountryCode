@@ -14,7 +14,7 @@ public class Bro9{
 
         if(phone.length() >= 4){
             countryCode = phone.substring(0, 4);
-            System.out.println("CountryCode is : "+countryCode);
+            System.out.println("CountryCode is +888 : "+countryCode);
         }
 
         else{
