@@ -6,19 +6,19 @@ public class Bro9{
         Scanner imran = new Scanner(System.in);
 
         String phone;
-        String countryCode;
+        String simCode;
 
         System.out.println("Enter Your Phone Number::");
 
         phone = imran.nextLine();
 
         if(phone.length() >= 4){
-            countryCode = phone.substring(0, 4);
-            System.out.println("CountryCode is +888 : "+countryCode);
+            simCode = phone.substring(0, 4);
+            System.out.println("SimCode is +880 : "+simCode);
         }
 
         else{
-            System.out.println("Invalid CountryCode");
+            System.out.println("Invalid simCode");
         }
 
         imran.close();
@@ -28,4 +28,4 @@ public class Bro9{
 //output
 Enter Your Phone Number::
 01745698522
-CountryCode is : 0174
+SimCode is +880: 0174
