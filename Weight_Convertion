@@ -1,0 +1,41 @@
+//Weight Convertion in java
+
+import java.util.Scanner;
+
+public class Bro10{
+    public static void main(String[] args) {
+        
+        Scanner imran = new Scanner(System.in);
+
+        double weight;
+        double newWeight;
+        int choice;
+
+
+        System.out.println("|==>> Weight Convertion Calculator <<==|");
+        System.out.println("1. Weight Convert in Pound to Kilogram (lbs to kg):");
+        System.out.println("2. weight Convert in Kilogram to pound (kg to lbs):");
+        System.out.println("3. Exit :");
+        System.out.println("Choose An Option::");
+        choice = imran.nextInt();
+
+        if(choice==1){
+            System.out.println("Enter Your Weight In Pound:");
+            weight = imran.nextDouble();
+            newWeight = weight*0.45359237; //Equation
+            System.out.println("Your Weight Is <::>"+newWeight);
+        }
+        else if(choice==2){
+            System.out.println("Enter Your Weigiht In Kilogram:");
+            weight = imran.nextDouble();
+            newWeight = weight*2.2046226218; //Equation
+            System.out.println("Your Weight s <::>"+newWeight);
+        }
+
+        else{
+            System.out.println("You Cannot Choose Any Option");
+
+        }
+        imran.close();
+    }
+}
