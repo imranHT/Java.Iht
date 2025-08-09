@@ -1,0 +1,20 @@
+public class Bro11{
+    public static void main(String[] args) {
+        
+        String day = "Monday";
+
+        switch(day){
+            case "Monday" -> System.out.println("It is an Working Day");
+            case "Tuesday" -> System.out.println("It is an Working Day");
+            case "Wednesday" -> System.out.println("It is an Workday Day");
+            case "Thrusday" -> System.out.println("It is an Workday");
+            case "Friday" -> System.out.println("It is an Offday");
+            case "Saturday" -> System.out.println("It is an Offday");
+
+            case "default" -> System.out.println("Error man");
+        }
+    }
+}
+
+//output
+It is an Working Day
