@@ -1,0 +1,47 @@
+
+import java.util.Scanner;
+
+public class Bro11{
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+        String day;
+        int time;
+
+        System.out.println("Enter Any Day:>:");
+        day = imran.nextLine();
+        System.out.println("Enter Time");
+        time = imran.nextInt();
+
+        switch(day){
+            case "Monday" -> System.out.println("Working day");
+            case "Tuesday" -> System.out.println("Working day");
+            case "Wednesday" -> System.out.println("Working day");
+            case "Thrusday" -> System.out.println("Working day");
+            case "Friday" -> System.out.println("Offday");
+            case "Saturday" -> System.out.println("Offday");
+
+            default -> System.out.println("Error");
+        }
+        switch(time){
+            case 10,11,12,13,14,15,16,17 -> System.out.println("(Morning to Afternon) In Office ");
+            case 18,19,20,21,22,23,1,2,3,4,5,6,7,8 -> System.out.println("(Night To Early Morning ) In Home ");
+        }
+        System.out.println("Its " +day+ " Time is " +time+ " O'clock. ");
+    }
+}
+//output
+Monday
+Enter Time
+10
+Working day
+(Morning to Afternon) In Office 
+Its Monday Time is 10 O'clock.
+
+//Output 2
+Friday
+Enter Time
+1
+Offday
+(Night To Early Morning ) In Home 
+Its Friday Time is 1 O'clock
