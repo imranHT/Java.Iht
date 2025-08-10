@@ -1,0 +1,73 @@
+import java.util.Scanner;
+public class Bro12{
+    public static void main(String[] args) {
+        
+        Scanner imran = new Scanner(System.in);
+
+        double num1;
+        double num2;
+        char operator;
+        double answer = 0;
+        boolean realOrfake = false;
+
+        System.out.println("::IMRANxCASIO::");
+        System.out.println("Enter an Number :->: ");
+        num1 = imran.nextDouble();
+        System.out.println("Enter Any Operator (+,-,*,/,*) :->: ");
+        operator = imran.next().charAt(0);
+        System.out.println("Enter another Number :->: ");
+        num2 = imran.nextDouble();
+
+
+        switch(operator){
+            case '+' -> answer = num1+num2;
+            case '-' ->answer = num1-num2;
+            case '*' ->answer = num1*num2;
+           case '/' ->
+            {
+                if(num2 == 0){
+                    System.out.println("Cannot Divide ");
+                    realOrfake = false;
+                }
+                else{
+                    answer = num1/num2;
+                }
+            }
+            case '^' -> answer = Math.pow(num1, num2);
+            
+            default ->{
+                System.out.println("Invalid Operator Man Try Again ");
+                realOrfake = false;
+            }
+           
+        }
+        if(realOrfake){
+            System.out.println(answer);
+        }
+        
+        System.out.println("The Result is : "+answer);
+        imran.close();
+    }
+}
+
+//output
+::IMRANxCASIO::
+Enter an Number :->: 
+10
+Enter Any Operator (+,-,*,/,*) :->: 
++
+Enter another Number :->: 
+20
+The Result is 30.0
+
+//output 2
+if the operator cannot input then.
+:IMRANxCASIO::
+Enter an Number :->: 
+20
+Enter Any Operator (+,-,*,/,*) :->: 
+imran
+Enter another Number :->: 
+20
+Invalid Operator Man Try Again 
+The Result is 0.0
