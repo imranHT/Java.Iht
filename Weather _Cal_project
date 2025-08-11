@@ -1,0 +1,33 @@
+//Weather Calculator
+import java.util.Scanner;
+public class Bro13{
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+        double temp;
+
+        System.out.println("Enter Today Weather.Then I watch you the Condition   :");
+
+        temp = imran.nextDouble();
+
+        if(temp >= 20 && temp <=25){
+            System.out.println("The Weather is Cool.Wear Extra Dress .");
+        }
+        else if(temp >= 26 && temp <= 31){
+            System.out.println("The Weather is Warm and Hot .");
+        }
+        else if(temp >=31 && temp <= 36){
+            System.out.println("The Weather is Hot . Use Umbrella And Cap ☔🌞");
+        }
+        else if(temp >=37 && temp <41){
+            System.out.println("The Weather is So hot ..When You go out from home Use SunsCream and Umbrella");
+        }
+        else if(temp <20){
+         System.out.println("So Cold . Please Use warming Cloth");
+        }
+        else{
+            System.out.println("You Are Die Man.....Bye Bye ");
+        }
+        imran.close();
+    }
+}
