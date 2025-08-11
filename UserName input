@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Bro13{
+    public static void main(String[] args) {
+        
+        Scanner imran = new Scanner(System.in);
+
+        String username;
+
+        System.out.println("Enter Your username :");
+        username = imran.nextLine();
+
+        if(username.length()<4 || username.length()>12){
+            System.out.println("Enter Username between 4 to 12 character ");
+
+        }
+        else if(username.contains(" ") || username.contains("_")){
+            System.out.println("Any Space or userscore is not used");
+        }
+        else{
+            System.out.println("Wellcome "+username+ " . Are You Well "+username+ " . It's Been Long Time "+username);
+        }
+
+
+    }
+}
+
+//output
+input : imran
+Wellcome imran . Are You Well imran . It's Been Long Time imran
