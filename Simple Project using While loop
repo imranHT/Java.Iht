@@ -1,0 +1,58 @@
+
+import java.util.Scanner;
+public class Bro14{
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+        String name = "";
+        int age = 0;
+        String city = "";
+        String responce = "";
+
+        while(name.isEmpty() ||  age <= 0 || city.isEmpty() || !responce.equals("Q")){
+
+            if(name.isEmpty()){
+                System.out.println("Enter Your Name Here : ");
+                name = imran.nextLine();
+            }
+if(age <= 0 ){
+    System.out.println("Enter Your Age ");
+    while(!imran.hasNextInt()){
+        System.out.println("Please Enter A Valid Age ");
+         imran.next();
+    }
+    age = imran.nextInt();
+    imran.nextLine();
+}
+            if(city.isEmpty()){
+                System.out.println("Enter Your City Or Location here :");
+                city = imran.nextLine();
+            }
+
+            if(!responce.equals("Q")){
+                System.out.println("If You See Your Details Then pass Q ");
+                responce = imran.next().toUpperCase() ;
+            }
+            
+        }
+        System.out.println("Your Name is "+name);
+        System.out.println("Your Age is "+age );
+        System.out.println("You Live in "+city);
+        System.out.println("Here Your Full Details ... Hope so You Enjoy This..");
+    }
+}
+
+//output
+
+Enter Your Name Here : 
+imran
+Enter Your Age 
+24
+Enter Your City Or Location here :
+Dhaka
+If You See Your Details Then pass Q 
+q
+Your Name is imran
+Your Age is 24
+You Live in Dhaka
+Here Your Full Details ... Hope so You Enjoy This..
