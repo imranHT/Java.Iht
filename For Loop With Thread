@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Bro16{
+    public static void main(String[] args)  throws InterruptedException {
+
+        Scanner imran = new Scanner(System.in);
+
+        System.out.println("Enter Countdown Number : ");  // enter any int number (1-10)
+
+        int start = imran . nextInt();
+
+        for(int i = start ; i>0 ; i--){    //Loop For Limit
+                 System.out.println(i);
+                 Thread.sleep(1000); //Thread Run 
+         
+        }
+
+        System.out.println("Hello I am Imran .. I like Programming");
+
+
+        imran.close(); //Close The Scanner
+        
+
+    }
+}
+
+output:
+(//NB: When I input the Countdown Number (5) then It auto countdown From 5 to 1 and lastly show me the output)
+Enter Countdown Number : 
+3
+3
+2
+1
+Hello I am Imran .. I like Programming
