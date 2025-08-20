@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Bro17{
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+        int rows;
+        int columns;
+        String name;
+
+        System.out.println("Hello.It is a nasted loop project");
+
+        System.out.println("Enter The Rows: ");
+        rows = imran.nextInt();
+
+        System.out.println("Enter The Columns: ");
+        columns = imran.nextInt();
+
+
+        imran.nextLine();
+
+        System.out.println("Enter The Name : ");
+        name = imran.nextLine();
+
+
+        for(int i = 0; i< rows ; i++){
+            for(int j = 0; j<columns; j++){
+                System.out.println(name);
+            }
+            System.out.println();
+        }
+        imran.close();
+    }
+}
