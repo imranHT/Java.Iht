@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Bro18{
+  public static void main(String[] args) {
+    
+    Scanner imran = new Scanner(System.in);
+
+
+    String name;
+    int age;
+
+    System.out.println("Enter Your name : ");
+    name = imran.nextLine();
+
+    System.out.println("Enter Your age : ");
+    age = imran.nextInt();
+
+    happyBirthday(name,age); // if you enter 1 happyBirthday statment it show 1 output..multiple means multiple output
+     happyBirthday(name,age);
+      happyBirthday(name,age);
+  }
+
+  static void happyBirthday(String name,int age){
+
+    System.out.println("Happy Birthday "+name);
+    System.out.println(name+" you are now "+age+ " years old ");
+  }
+}
