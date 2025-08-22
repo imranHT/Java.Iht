@@ -1,0 +1,27 @@
+// overloaded Project 2;
+
+public class Bro19{
+    public static void main(String[] args) {
+        
+        String lamborgini = superCar("AvantadorSVJ","V12","AllWeelDriving","0 to 100 in 0.5 second","Red CarboFiver body ");
+        System.out.println(lamborgini);
+    }
+    static String superCar(String model){
+        return model + "lamborgini";
+    }
+    static String superCar(String model,String engine){
+        return engine + " " +model+ "lamborgini ";
+    }
+    static String superCar(String model,String engine,String power){
+        return power+ " " +engine+ " " +model+ " lamborgini";
+    }
+    static String superCar(String model,String engine,String power, String speed){
+        return speed + " "+power+ " "+ engine+ " "+ model+ " lamborgini";
+    }
+    static String superCar(String model,String engine,String power,String speed,String durability){
+        return durability+ " -- " + speed+ " -- "  + power + " -- " + engine+ " -- " + model+ "--  my new lamborgini Super car";
+    }
+}
+
+//output
+Red CarboFiver body  -- 0 to 100 in 0.5 second -- AllWeelDriving -- V12 -- AvantadorSVJ--  my new lamborgini Super car
