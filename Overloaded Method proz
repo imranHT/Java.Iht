@@ -1,0 +1,22 @@
+public class Bro19{
+    public static void main(String[] args) {
+        
+        String fuska = fryPapor ("roundFrypuri","alu-dalVorta","boildEgg", "tamarind-water");
+
+        System.out.println(fuska);
+    }
+
+    static String fryPapor (String puri){
+        return puri + "fuska";
+    }
+    static String fryPapor(String puri, String spaice){
+        return spaice + " " +puri+ "fuska ";
+    }
+    static String fryPapor(String puri,String spaice, String testy){
+        return testy + " " + spaice+  " " +puri+ " fuska";
+    }
+    static String fryPapor(String puri,String spaice, String testy, String flavor){
+
+        return flavor+ " " +testy+ " " + spaice+ " " +puri+ " == yammi fuska ";
+    }
+}
