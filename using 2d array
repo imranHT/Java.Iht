@@ -1,0 +1,32 @@
+public class Bro26{
+    public static void main(String[] args) {
+        
+
+        String[] name = {" imran", " mehedi", "mohammad "};
+        String[] location = {"dhaka", "rajshahi", "sirajgong"};
+        String[] fFood = {"any thing halal","pizza","fish fry"};
+
+        String[][] all = {name,location,fFood};
+
+        for(String[] datas : all){
+            for(String data : datas){
+                System.out.println(data + "");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+output:
+ imran
+ mehedi
+mohammad 
+
+dhaka
+rajshahi
+sirajgong
+
+any thing halal
+pizza
+fish fry
