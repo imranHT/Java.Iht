@@ -1,0 +1,181 @@
+import java.util.Scanner;
+public class Bro27{
+public static void main(String[] args) {
+    
+
+    // QUIZ GAME;
+
+    String[] questions = {"when Bangladesh got independent ?",
+                         "What is the capital of Bangladesh ?",
+                         "Who is the father of computers ?",
+                         "Who is the founder of Google ?",
+                         "What's year of Facebook launched ?",
+                         "Which Company owne iqoo mobile brand ?",
+                         "Who is the current Apple CEO ?",
+                         "Which Company develop java programming language ?",
+                         "What's the meaning of OTP ?",
+                         "What's the first programming language ?"};
+ 
+  String [][] options = {{"1/ 1945", "2/ 1956", "3/ 1971","4/ 1975"},
+                         {"1/ Jakarta","2/ Dhaka","3/ Islamabad","4/ london"},
+                         {"1/ Bangabondhu","2/ Steve jobs","3/ Charles Babbage","4/ Henry Cavile"},
+                         {"1/ Larry page","2/ Tim cook","3/ Larry alison","4/ Alen walker"},
+                         {"1/ 2002","2/ 2003","3/ 2000","4/ 2004"},
+                         {"1/ Infinix","2/ Sumsung","3/ Xaiomi","4/ Vivo"},
+                         {"1/ Mark jakarbarg","2/ Mukash Ambani","3/ Tim Cook","4/ jawad Karim"},
+                         {"1/ Oracel","2/ IBM","3/ Micrisoft","4/ Alphabate"},
+                         {"1/ One time press","2/ Over time processes","3/ One time password","4/ One the power"},
+                         {"1/ java","2/ C","3/ C++","4/ Fortran"}};
+ 
+                         
+   int[] answers = {3,2,3,1,4,4,3,1,3,4};
+    int score = 0;
+    int guess;
+   
+    Scanner imran = new Scanner(System.in);
+
+    System.out.println("------------");
+    System.out.println("Welcome . Pelase solve the question ");
+    System.out.println("--------------");
+
+
+
+    for(int i = 0; i < questions.length; i++){
+        System.out.println(questions[i]);
+
+        for(String option : options[i]){
+            System.out.println(option);
+        }
+
+        System.out.println("Enter The Guess : ");
+        guess = imran.nextInt();
+
+
+        if(guess == answers[i]){
+            System.out.println("--------");
+            System.out.println("CORRECT !");
+            System.out.println("-------");
+            score++;
+        }
+        else{
+            System.out.println("--------");
+            System.out.println("WRONG!");
+            System.out.println("-------");
+            
+        }
+
+    }
+
+    System.out.println("You Got " + score + " Out of " + questions.length);
+
+ imran.close();
+}
+}
+
+
+output:
+
+------------
+Welcome . Pelase solve the question 
+--------------
+when Bangladesh got independent ?
+1/ 1945
+2/ 1956
+3/ 1971
+4/ 1975
+Enter The Guess : 
+3
+--------
+CORRECT !
+-------
+What is the capital of Bangladesh ?
+1/ Jakarta
+2/ Dhaka
+3/ Islamabad
+4/ london
+Enter The Guess : 
+2
+--------
+CORRECT !
+-------
+Who is the father of computers ?
+1/ Bangabondhu
+2/ Steve jobs
+3/ Charles Babbage
+4/ Henry Cavile
+Enter The Guess : 
+3
+--------
+CORRECT !
+-------
+Who is the founder of Google ?
+1/ Larry page
+2/ Tim cook
+3/ Larry alison
+4/ Alen walker
+Enter The Guess : 
+1
+--------
+CORRECT !
+-------
+What's year of Facebook launched ?
+1/ 2002
+2/ 2003
+3/ 2000
+4/ 2004
+Enter The Guess : 
+4
+--------
+CORRECT !
+-------
+Which Company owne iqoo mobile brand ?
+1/ Infinix
+2/ Sumsung
+3/ Xaiomi
+4/ Vivo
+Enter The Guess : 
+4
+--------
+CORRECT !
+-------
+Who is the current Apple CEO ?
+1/ Mark jakarbarg
+2/ Mukash Ambani
+3/ Tim Cook
+4/ jawad Karim
+Enter The Guess : 
+3
+--------
+CORRECT !
+-------
+Which Company develop java programming language ?
+1/ Oracel
+2/ IBM
+3/ Micrisoft
+4/ Alphabate
+Enter The Guess : 
+1
+--------
+CORRECT !
+-------
+What's the meaning of OTP ?
+1/ One time press
+2/ Over time processes
+3/ One time password
+4/ One the power
+Enter The Guess : 
+3
+--------
+CORRECT !
+-------
+What's the first programming language ?
+1/ java
+2/ C
+3/ C++
+4/ Fortran
+Enter The Guess : 
+4
+--------
+CORRECT !
+-------
+You Got 10 Out of 10
