@@ -1,0 +1,102 @@
+public class Bro30 {
+    public static void main(String[] args) {
+        
+Car car = new Car();
+
+System.out.println("About car");
+System.out.println("----------------");
+System.out.println(car.brand);
+System.out.println(car.model);
+System.out.println(car.engine);
+System.out.println("Engine Horsepower--> " +car.horsePower);
+System.out.println("Relesing Year-->  " +car.year); 
+System.out.println("Price--> "  +car.price);
+System.out.println("Is is Running--> " +car.isRunning);
+
+
+ System.out.println("------------------");
+System.out.println("Basic Information about car company owner and car owner : ");
+ car.companyOwner();
+ car.location();
+ car.carOwner();
+ car.ownerLocation();
+ car.start();
+ car.driving();
+ car.speed();
+ car.stop();
+
+
+}
+}
+public class Car {
+           
+           
+    String brand = "Brand--> Pagani";
+    String model = "Model--> Zondra";
+    String engine = "Engine--> Mercedes AMG";
+    int year = 2019;
+    int horsePower = 2000 ;
+    double price = 200000000.00;
+    boolean isRunning = false;
+
+
+
+    void companyOwner(){
+        System.out.println("Horasio Pagani");
+    }
+
+    void location(){
+        System.out.println("Itally");
+    }
+
+    void carOwner(){
+        System.out.println("Imran Hasan Talukdar");
+    }
+
+    void ownerLocation(){
+        System.out.println("Bangladesh");
+    }
+
+    void start(){
+        isRunning = true;
+        System.out.println("You start your car ");
+    }
+    void driving(){
+        isRunning = true;
+        System.out.println("You driving your " +brand+ " || " +model);
+    }
+    void speed(){
+        isRunning = true;
+        System.out.println("Your per hour speed is 200 Kmph");
+    }
+   
+    void stop(){
+        isRunning = false;
+
+        System.out.println("You just stop your " +brand);
+    }
+
+
+}
+
+
+output:
+About car
+----------------
+Brand--> Pagani
+Model--> Zondra
+Engine--> Mercedes AMG
+Engine Horsepower--> 2000
+Relesing Year-->  2019
+Price--> 2.0E8
+Is is Running--> false
+------------------
+Basic Information about car company owner and car owner : 
+Horasio Pagani
+Itally
+Imran Hasan Talukdar
+Bangladesh
+You start your car 
+You driving your Brand--> Pagani || Model--> Zondra
+Your per hour speed is 200 Kmph
+You just stop your Brand--> Pagani
