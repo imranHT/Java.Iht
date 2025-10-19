@@ -47,11 +47,25 @@ System.out.println("------------------------");
       System.out.println(student3.location);
       System.out.println(student3.id);
       System.out.println(student3.isEnrolled);
+
+
+
+      System.out.println("--------------------");
+
+      student1.study();
+      student2.study();
+      student3.study();
+
+      System.out.println("--------------------");
+
+
+      System.out.println("---------------------");
+      System.out.println("Imran hasan Talukdar");
+      System.out.println("---------------------");
     }
     
 }
 
-class
 
 package Constructor;
 
@@ -80,7 +94,9 @@ Student(String name, int age, double cgpa, String universityName,String location
     this.isEnrolled = true;
 }   
 
-
+void study(){
+    System.out.println(this.name + " is studying CSE 62 batch in Prime University : ");
+}
 
 }
 
@@ -110,3 +126,11 @@ Prime University
 Mirpur 1
 1017
 true
+--------------------
+Imran hasan is studying CSE 62 batch in Prime University : 
+Shakib hassan is studying CSE 62 batch in Prime University : 
+Ruhul amin fahad is studying CSE 62 batch in Prime University : 
+--------------------
+---------------------
+Imran hasan Talukdar
+---------------------
