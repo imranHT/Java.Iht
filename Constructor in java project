@@ -1,0 +1,112 @@
+package Constructor;
+
+public class Bor31 {
+    public static void main(String[] args) {
+
+
+
+
+        //Constructor;;
+        
+      Student student1 = new Student("Imran hasan", 23, 3.58, "Prime University", "Mirpur 1", "CSE", 1001);
+      Student student2 = new Student("Shakib hassan", 24, 3.65, "Prime University", "Mirpur 1", "CSE", 1028);
+      Student student3 = new Student("Ruhul amin fahad", 24, 3.67, "Prime University", "Mirpur 1", "CSE", 1017);
+
+
+
+
+
+      System.out.println(student1.name);
+      System.out.println(student1.age);
+      System.out.println(student1.cgpa);
+      System.out.println(student1.universityName);
+      System.out.println(student1.location);
+      System.out.println(student1.id);
+      System.out.println(student1.isEnrolled);
+
+
+      System.out.println("---------------");
+
+
+      System.out.println(student2.name);
+      System.out.println(student2.age);
+      System.out.println(student2.cgpa);
+      System.out.println(student2.universityName);
+      System.out.println(student2.location);
+      System.out.println(student2.id);
+      System.out.println(student2.isEnrolled);
+
+
+System.out.println("------------------------");
+
+
+      System.out.println(student3.name);
+      System.out.println(student3.age);
+      System.out.println(student3.cgpa);
+      System.out.println(student3.universityName);
+      System.out.println(student3.location);
+      System.out.println(student3.id);
+      System.out.println(student3.isEnrolled);
+    }
+    
+}
+
+class
+
+package Constructor;
+
+public class Student {
+
+String name;
+int age;
+double cgpa;
+String universityName;
+String location;
+String depertment;
+int id;
+boolean isEnrolled;
+
+
+// Constructor
+Student(String name, int age, double cgpa, String universityName,String location,String depertment,int id){
+
+    this.name = name;
+    this. age = age;
+    this. cgpa = cgpa;
+    this.universityName = universityName;
+    this.location = location;
+    this.depertment = depertment;
+    this.id = id;
+    this.isEnrolled = true;
+}   
+
+
+
+}
+
+
+output::
+
+Imran hasan
+23
+3.58
+Prime University
+Mirpur 1
+1001
+true
+---------------
+Shakib hassan
+24
+3.65
+Prime University
+Mirpur 1
+1028
+true
+------------------------
+Ruhul amin fahad
+24
+3.67
+Prime University
+Mirpur 1
+1017
+true
