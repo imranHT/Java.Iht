@@ -1,0 +1,144 @@
+
+//Main class
+
+public class Bro32 {
+    public static void main(String[] args) {
+        
+
+
+
+
+     User user1 = new User("Imran Hasan","Dhaka,Bangladesh","Prime University","Software Engineear at GOOGLE",23, "app and database","imran@email.com");
+     User user2 = new User("J Balbin","NY , USA","MIT","Software Engineear at GOOGLE",25,"Web and app ","jbalbin@gmail.com");
+     User user3 = new User("Abdul kalam","Canada","The University of Toronto","Software Engineear in GOOGLE",25,"Cyber Site","kalam@gmail.com");
+
+
+ 
+
+
+  System.out.println(user1.userName);
+  System.out.println(user1.location);
+  System.out.println(user1.graduationFrom);
+  System.out.println(user1.rolls);
+  System.out.println(user1.age);
+  System.out.println(user1.skills);
+  System.out.println(user1.email);
+
+System.out.println("--------------------------------");
+
+    System.out.println(user2.userName);
+  System.out.println(user2.location);
+  System.out.println(user2.graduationFrom);
+  System.out.println(user2.rolls);
+  System.out.println(user2.age);
+  System.out.println(user2.skills);
+  System.out.println(user2.email);
+
+
+  System.out.println("----------------------------");
+
+    System.out.println(user3.userName);
+  System.out.println(user3.location);
+  System.out.println(user3.graduationFrom);
+  System.out.println(user3.rolls);
+  System.out.println(user3.age);
+  System.out.println(user3.skills);
+  System.out.println(user3.email);
+
+    }
+}
+
+//class
+
+package Parameter;
+
+public class User { 
+
+  //Overloded Constructor;
+
+  String userName;
+  String location;
+  String graduationFrom;
+  String rolls;
+  int age;
+String skills;
+  String email;
+
+
+  User(String userName){
+
+    this.userName = userName;
+    
+  }
+  User(String userName,String location){
+     this.userName = userName;
+    this.location = location;
+    
+  }
+  User(String userName,String location,String graduationFrom){
+    this.userName = userName;
+    this.location = location;
+    this.graduationFrom = graduationFrom;
+    
+  }
+  User(String userName,String location,String graduationFrom,String rolls){
+    this.userName = userName;
+    this.location = location;
+    this.graduationFrom = graduationFrom;
+    this.rolls = rolls;
+    
+  }
+  User(String userName,String location,String graduationFrom,String rolls,int age){
+
+     this.userName = userName;
+    this.location = location;
+    this.graduationFrom = graduationFrom;
+    this.rolls = rolls;
+    this.age = age;
+   
+  }
+  User(String userName,String location,String graduationFrom,String rolls,int age,String skills){
+     this.userName = userName;
+    this.location = location;
+    this.graduationFrom = graduationFrom;
+    this.rolls = rolls;
+    this.age = age;
+    this.skills = skills;
+    
+  }
+  User(String userName,String location,String graduationFrom,String rolls,int age,String skills,String email){
+      this.userName = userName;
+    this.location = location;
+    this.graduationFrom = graduationFrom;
+    this.rolls = rolls;
+    this.age = age;
+    this.skills = skills;
+    this.email = email;
+  }  
+}
+
+
+output::
+Imran Hasan
+Dhaka,Bangladesh
+Prime University
+Software Engineear at GOOGLE
+23
+app and database
+imran@email.com
+--------------------------------
+J Balbin
+NY , USA
+MIT
+Software Engineear at GOOGLE
+25
+Web and app 
+jbalbin@gmail.com
+----------------------------
+Abdul kalam
+Canada
+The University of Toronto
+Software Engineear in GOOGLE
+25
+Cyber Site
+kalam@gmail.com
