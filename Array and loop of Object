@@ -1,0 +1,68 @@
+//Main class
+public class Bro33 {
+    public static void main(String[] args) {
+        
+      Car[] cars = {new Car("Masarati SR ", "Red", 250.00),
+                    new Car("Lamborgini Huracon", "Blue", 300.00),
+                    new Car("Ferrari", "Black", 320)};
+
+
+
+                    for(Car car : cars){
+                        car.model();
+                    }
+
+                    System.out.println("-------------------");
+                    System.out.println("-----------------");
+                   
+                   
+                    for(Car car : cars){
+                        car.speed();
+                    }
+                    System.out.println("IMran hasan");
+}
+}
+
+//Class
+
+package Array;
+
+public class Car {
+    
+      //using loop and array to creat an array Object
+
+
+      String model;
+      String color;
+      double speed;
+      
+
+
+      Car(String model,String color,double speed){
+        this. model = model;
+        this. color = color;
+        this. speed = speed;
+
+
+      }
+
+
+      void model(){
+        System.out.println("You drive a " + color + " " +model);
+      }
+
+      void speed(){
+        System.out.println("Your current Speed of " + model + " is "+ speed + " Kmph/");
+      }
+}
+
+//output
+You drive a Red Masarati SR 
+You drive a Blue Lamborgini Huracon
+You drive a Black Ferrari
+-------------------
+-----------------
+Your current Speed of Masarati SR  is 250.0 Kmph/
+Your current Speed of Lamborgini Huracon is 300.0 Kmph/
+Your current Speed of Ferrari is 320.0 Kmph/
+IMran hasan
