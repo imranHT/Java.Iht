@@ -1,0 +1,112 @@
+//main class
+
+package Lala;
+
+public class Bro34 {
+
+    public static void main(String[] args) {
+        
+
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        Plant plant = new Plant();
+        
+    
+
+
+
+        dog.speak();
+        cat.speak();
+
+        plant.photosynthesize();
+
+        System.out.println(dog.isAlive);
+        
+        dog.eat();
+        cat.eat();
+        
+
+        System.out.println(dog.lives);
+        System.out.println(cat.lives);
+        
+           
+    }
+    
+}
+
+
+//Old Parent class
+package Lala;
+
+public class Organism {
+    boolean isAlive;
+
+    Organism(){
+        isAlive = false;
+    }
+    
+}
+
+//Plant class
+
+package Lala;
+
+public class Plant extends Organism{
+
+    void photosynthesize(){
+        System.out.println("The plant absorbs sunlight");
+    }
+    
+}
+
+//Animal class
+package Lala;
+
+public class Animal  extends Organism{
+    void eat(){
+        System.out.println("This animal is eating");
+    }
+    
+}
+
+//Animal Dog class
+package Lala;
+
+public class Dog extends Animal{
+
+    int lives = 1;
+    void speak(){
+        System.out.println("The dog goes woof ");
+    }
+    
+}
+
+//Animal cat class
+
+package Lala;
+
+public class Cat extends Animal {
+    int lives = 9;
+    void speak(){
+        System.out.println("The cat goes meow");
+    }
+    
+}
+
+
+// output
+
+The dog goes woof 
+The cat goes meow
+-----------
+The plant absorbs sunlight
+-----------
+false
+-----------
+This animal is eating
+This animal is eating
+-----------
+1
+9
+-----------
+
