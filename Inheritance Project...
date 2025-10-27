@@ -1,0 +1,202 @@
+package MobliePhone;
+
+public class ProjectBBK {
+    public static void main(String[] args) {
+//Model of the code
+ // AboutBBK
+ //├── Vivo
+ //│    //└── Iqoovivo
+ //└── Oppo
+      //└── Realmeoppo
+        
+
+      AboutBBK info = new AboutBBK("(BBK Electronics Corporation was a Chinese multinational brand specialized in  audio and video equipment, home entertainment products and home appliances.It has Multiple Mobile brand Like(Oppo,Vivo,Oneplus,Iqoo,Realme) etc.It also acted as an investor in leading companies in various sectors of consumer electronics. The company specialized in developing consumer electronics products such as smartphones, tablet computers, smartwatches, smart TVs, Hi-Fi equipment, Blu-ray players, and digital cameras.)");
+
+        
+          System.out.println(info.about);
+          System.out.println("\n");
+
+
+         
+         System.out.println("\n");
+         System.out.println("Brands and Subbrands Information::");
+        Vivo vivo = new Vivo();
+        vivo.brand();
+        System.out.println("\n");
+        vivo.model();
+        System.out.println("----------------");
+System.out.println("\n");
+            
+         Oppo oppo = new Oppo();
+         oppo.brand();
+         System.out.println("\n");
+         oppo.model();
+ System.out.println("----------------");
+         System.out.println("\n");
+         
+
+         Iqoovivo iqoovivo = new Iqoovivo();
+         iqoovivo.subBrand();
+         System.out.println("\n");
+         iqoovivo.models();
+         System.out.println("\n");
+          System.out.println("Opening date:");
+         System.out.println(iqoovivo.created);
+
+          System.out.println("----------------");
+          System.out.println("\n");
+
+          Realmeoppo realmeoppo = new Realmeoppo();
+          realmeoppo.subBrand();
+          System.out.println("\n");
+          realmeoppo.models();
+          System.out.println("\n");
+          System.out.println("OPening date:");
+          System.out.println(realmeoppo.created);
+
+System.out.println("\n");
+          System.out.println("Imran Hasan");
+       
+    } 
+}
+
+//Parant class
+
+package MobliePhone;
+
+public class AboutBBK {
+    
+    boolean isActive;
+    String about;
+ //using constructor parametar
+    AboutBBK(String about){
+        this.about = about;
+        this.isActive = true;
+    }
+    AboutBBK(){
+        this.isActive = true;
+    }
+
+}
+
+// Class Vivo
+package MobliePhone;
+
+public class Vivo extends AboutBBK{
+
+    void brand(){
+        System.out.println("Info:-> Vivo is the Brand of BBK. Vivo Mobile Communication Co., Ltd., d/b/a vivo (stylized as all lowercase), is a Chinese multinational technology company headquartered in Dongguan, Guangdong, that designs and develops smartphones, smartphone accessories, software, and online services. The company develops software for its phones, distributed through its V-Appstore, with iManager included in their proprietary, Android-based operating system, Origin OS in mainland China, and Funtouch OS elsewhere. ");
+    }
+
+    void model(){
+        System.out.println("Model:-> X-Series, V-Series, Y-Series,T-Series");
+    }
+    
+}
+
+//Class Oppo
+
+package MobliePhone;
+
+public class Oppo extends AboutBBK{
+
+    void brand(){
+        System.out.println("Info:->Oppo is the Another Brand of BBK.Oppo (stylized as OPPO or oppo) is a private Chinese consumer electronics manufacturer and technology company headquartered in Shenzhen, Guangdong.[1]\n" + //
+                        "\n" + //
+                        "Founded in 2004, its major product lines include smartphones, smart devices, audio devices, power banks, and other electronic products.\n" + //
+                        "\n" + //
+                        "The company is one of the largest smartphone manufacturers in the world, with around 9% of the global market share, and 600 million global monthly active users across more than 60 markets.");
+
+
+    }
+
+    void model(){
+        System.out.println("Models:-> A-Series,Reno-Series,Find X -Series,F-Series,R-Series");
+    }
+    
+}
+
+//Subclass Iqoo
+
+package MobliePhone;
+
+public class Iqoovivo extends Vivo {
+
+    int created = 2019;
+
+    void subBrand(){
+        System.out.println("Info:-> Iqoo is the Sub Brand of Vivo.. It Created in 2019.");
+    }
+
+    void models(){
+        System.out.println("Models:-> Iqoo-Series,Z-Series,Nio-Series");
+
+    }
+    
+    
+}
+
+//Subclass Realme
+
+package MobliePhone;
+
+public class Realmeoppo extends Oppo{
+
+    int created = 2018;
+
+    void subBrand(){
+        System.out.println("Info:-> Realme is the subbrand off Oppo..Which is Start it's journey in 2018.");
+    }
+
+    void models(){
+        System.out.println("models:-> Number-Series,C-Series,Nazro-Series,P-series");
+    }
+    
+}
+
+
+//output:
+
+(BBK Electronics Corporation was a Chinese multinational brand specialized in  audio and video equipment, home entertainment products and home appliances.It has Multiple Mobile brand Like(Oppo,Vivo,Oneplus,Iqoo,Realme) etc.It also acted as an investor in leading companies in various sectors of consumer electronics. The company specialized in developing consumer electronics products such as smartphones, tablet computers, smartwatches, smart TVs, Hi-Fi equipment, Blu-ray players, and digital cameras.)
+
+
+
+
+Brands and Subbrands Information::
+Info:-> Vivo is the Brand of BBK. Vivo Mobile Communication Co., Ltd., d/b/a vivo (stylized as all lowercase), is a Chinese multinational technology company headquartered in Dongguan, Guangdong, that designs and develops smartphones, smartphone accessories, software, and online services. The company develops software for its phones, distributed through its V-Appstore, with iManager included in their proprietary, Android-based operating system, Origin OS in mainland China, and Funtouch OS elsewhere. 
+
+
+Model:-> X-Series, V-Series, Y-Series,T-Series
+----------------
+
+
+Info:->Oppo is the Another Brand of BBK.Oppo (stylized as OPPO or oppo) is a private Chinese consumer electronics manufacturer and technology company headquartered in Shenzhen, Guangdong.[1]
+
+Founded in 2004, its major product lines include smartphones, smart devices, audio devices, power banks, and other electronic products.
+
+The company is one of the largest smartphone manufacturers in the world, with around 9% of the global market share, and 600 million global monthly active users across more than 60 markets.
+
+
+Models:-> A-Series,Reno-Series,Find X -Series,F-Series,R-Series
+----------------
+
+
+Info:-> Iqoo is the Sub Brand of Vivo.. It Created in 2019.
+
+
+Models:-> Iqoo-Series,Z-Series,Nio-Series
+
+
+Opening date:
+2019
+----------------
+
+
+Info:-> Realme is the subbrand off Oppo..Which is Start it's journey in 2018.
+
+
+models:-> Number-Series,C-Series,Nazro-Series,P-series
+
+
+OPening date:
+2018
