@@ -1,0 +1,219 @@
+//Main class
+package Car;
+
+public class ProjectToyota {
+    public static void main(String[] args) {
+        
+
+        ToyotaCorp info = new ToyotaCorp("The Toyota Group (トヨタグループ, Toyota Gurūpu) is a group of companies that have supplier, vendor and investment relationships with Toyota Industries and Toyota Motor vehicle manufacturing facilities. It is similar to a keiretsu in that no particular entity has outright control over the entire group, although unlike most keiretsu it does not contain a major bank");
+        System.out.println(info.about);
+       
+        System.out.println("\n");
+        
+         System.out.println("About Toyota:--");
+        ToyotaMotor toyotamotor = new ToyotaMotor();
+        toyotamotor.brand();
+        System.out.println("\n");
+        toyotamotor.Series();
+        System.out.println("--------------------");
+        System.out.println("Founding Date:"+toyotamotor.openingDate);
+        System.out.println("Founder:"+toyotamotor.founder);
+        System.out.println("Total Employee:"+toyotamotor.totalWorker);
+        System.out.println("\n");
+   
+        System.out.println("About Lexus:--");
+        SubLexus sublexus = new SubLexus();
+        sublexus.brand();
+         System.out.println("\n");
+        sublexus.Series();
+        System.out.println("--------------------");
+        System.out.println("Founding Date :"+sublexus.openingDate);
+        System.out.println("Founder:"+sublexus.founder);
+        System.out.println("Section : "+sublexus.section);
+        System.out.println("\n");
+
+        System.out.println("About Daihtsu");
+        SubDaihatsu subdaihatsu  = new SubDaihatsu();
+        subdaihatsu.brand();
+         System.out.println("\n");
+        subdaihatsu.Series();
+        System.out.println("----------------------");
+        System.out.println("Founding Date :"+subdaihatsu.openingDate);
+        System.out.println("Founder:"+subdaihatsu.founder);
+        System.out.println("Total Employee : "+subdaihatsu.totalWorker);
+        System.out.println("\n");
+
+          System.out.println("About Hino");
+     SubHino subhino = new SubHino();
+     subhino.brand();
+     System.out.println("\n");
+     subhino.Series();
+       System.out.println("----------------------");
+        System.out.println("Founding Date :"+subhino.openingDate);
+        System.out.println("Founder:"+subhino.product);
+        System.out.println("Total Employee : "+subhino.totalWorker);
+        System.out.println("\n");
+
+
+    }
+    
+}
+//Grand Class
+
+package Car;
+
+public class ToyotaCorp {
+
+    boolean isActive;
+    String about;
+
+
+
+    ToyotaCorp(String about){
+        this.about = about;
+        this.isActive = true;
+    }
+
+    ToyotaCorp(){
+        this.isActive = true;
+    }
+
+    
+    
+}
+
+// Parent class
+package Car;
+
+public class ToyotaMotor extends ToyotaCorp{
+
+    int openingDate = 1937;
+    String founder = "Kiichiro Toyoda";
+    int totalWorker =  375235;
+
+    void brand(){
+        System.out.println("Info--> Toyota Motor  is a Japanese multinational automotive manufacturer headquartered in Toyota City, Aichi, Japan. It was founded by Kiichiro Toyoda and incorporated on August 28, 1937. Toyota is the largest automobile manufacturer in the world, producing about 10 million vehicles per year.It has Multiple subbrand .. the brands name are (Lexus,Daihatsu and Hino motors) etc.");
+
+    }
+
+    void Series(){
+        System.out.println("Series--> SEDAN:-> Corolla,Cammy. SUV:-> Fortuner,RAV4. SPORTS:-> GR86,Supra");
+    }
+
+    
+}
+
+//Child class 1:
+package Car;
+
+public class SubLexus extends ToyotaMotor{
+
+    int openingDate = 1989;
+    String founder = "Eiji Toyoda";
+    String section = "Luxury Vehicles";
+
+
+    void brand(){
+        System.out.println("Info--> Lexus is the luxury vehicle division of the Japanese automaker Toyota Motor Corporation. The Lexus brand is marketed in more than 90 countries and territories worldwide and is Japan's largest-selling make of premium cars. It has ranked among the 10 largest Japanese global brands in market value. Lexus has been headquartered in Shimoyama, Aichi, in Japan since 2024. Operational centers are located in Brussels, Belgium, and Plano, Texas, United States.");
+    }
+
+    void Series(){
+        System.out.println("Series:--> SEDAN:-> IS,ES,LS, SUV:-> UX,NX,RX, SPORTS:-> RC,LC,LFA, ELECTRIC:-> RZ,H/H+,EV");
+    }
+
+
+    
+}
+
+//Child class 2:
+package Car;
+
+public class SubDaihatsu extends ToyotaMotor{
+                
+    int openingDate = 1951;
+    String founder = "Saneyasu Oka";
+    int totalWorker = 12508;
+
+
+    void brand(){
+        System.out.println("Info:--> Daihatsu was officially formed on March 1, 1951, as a successor to Hatsudoki Seizo Co. Ltd, founded in 1907, as part of Hatsudoki's major restructuring. Hatsudoki's formation was largely influenced by the Engineering Department's faculty of Osaka University, to develop a gasoline-powered engine for small, stationary power plants. From the beginning of the company until 1930, when a prototype three-wheeler truck was considered and proposed, Hatsudoki's focus was largely steam engines for Japanese National Railways and included rail carriages for passenger transportation. The company then focused on railroad diesel engines, working with Niigata Engineering and Shinko Engineering Co., Ltd. Before the company began to manufacture automobiles, their primary Japanese competitor was Yanmar for diesel engines that were not installed in a commercial truck to provide motivation.");
+    }
+
+    void Series(){
+        System.out.println("Models:--> Mira,Tonto,Toft,Rockry,Sition,Altis");
+    }
+
+}
+
+
+//Child class 3:
+package Car;
+
+public class SubHino extends ToyotaMotor{
+
+    int openingDate = 1942;
+    String product = "Bus & Truck";
+    int totalWorker = 	34231 ;
+
+    void brand(){
+        System.out.println("Hino Motors, Ltd, commonly known as Hino, is a Japanese manufacturer of commercial vehicles and diesel engines (including those for trucks, buses and other vehicles) headquartered in Hino, Tokyo. The company was established in 1942 as a corporate spin-off from previous manufacturers.Hino Motors is a large constituent of the Nikkei 225 on the Tokyo Stock Exchange. It is a subsidiary of Toyota and one of 16 major companies of the Toyota Group.");
+    }
+    void Series(){
+        System.out.println("Hino Tuck Series:--> 200,300,500,700,XL. Hino BUS Series:--> Hino115,Hino GB,Hino Ak,Hino RM,Hino Rk,Hino RM");
+        
+    }
+}
+
+
+//Output:
+
+The Toyota Group (トヨタグループ, Toyota Gurūpu) is a group of companies that have supplier, vendor and investment relationships with Toyota Industries and Toyota Motor vehicle manufacturing facilities. It is similar to a keiretsu in that no particular entity has outright control over the entire group, although unlike most keiretsu it does not contain a major bank
+
+
+About Toyota:--
+Info--> Toyota Motor  is a Japanese multinational automotive manufacturer headquartered in Toyota City, Aichi, Japan. It was founded by Kiichiro Toyoda and incorporated on August 28, 1937. Toyota is the largest automobile manufacturer in the world, producing about 10 million vehicles per year.It has Multiple subbrand .. the brands name are (Lexus,Daihatsu and Hino motors) etc.
+
+
+Series--> SEDAN:-> Corolla,Cammy. SUV:-> Fortuner,RAV4. SPORTS:-> GR86,Supra
+--------------------
+Founding Date:1937
+Founder:Kiichiro Toyoda
+Total Employee:375235
+
+
+About Lexus:--
+Info--> Lexus is the luxury vehicle division of the Japanese automaker Toyota Motor Corporation. The Lexus brand is marketed in more than 90 countries and territories worldwide and is Japan's largest-selling make of premium cars. It has ranked among the 10 largest Japanese global brands in market value. Lexus has been headquartered in Shimoyama, Aichi, in Japan since 2024. Operational centers are located in Brussels, Belgium, and Plano, Texas, United States.
+
+
+Series:--> SEDAN:-> IS,ES,LS, SUV:-> UX,NX,RX, SPORTS:-> RC,LC,LFA, ELECTRIC:-> RZ,H/H+,EV
+--------------------
+Founding Date :1989
+Founder:Eiji Toyoda
+Section : Luxury Vehicles
+
+
+About Daihtsu
+Info:--> Daihatsu was officially formed on March 1, 1951, as a successor to Hatsudoki Seizo Co. Ltd, founded in 1907, as part of Hatsudoki's major restructuring. Hatsudoki's formation was largely influenced by the Engineering Department's faculty of Osaka University, to develop a gasoline-powered engine for small, stationary power plants. From the beginning of the company until 1930, when a prototype three-wheeler truck was considered and proposed, Hatsudoki's focus was largely steam engines for Japanese National Railways and included rail carriages for passenger transportation. The company then focused on railroad diesel engines, working with Niigata Engineering and Shinko Engineering Co., Ltd. Before the company began to manufacture automobiles, their primary Japanese competitor was Yanmar for diesel engines that were not installed in a commercial truck to provide motivation.
+
+
+Models:--> Mira,Tonto,Toft,Rockry,Sition,Altis
+----------------------
+Founding Date :1951
+Founder:Saneyasu Oka
+Total Employee : 12508
+
+
+About Hino
+Hino Motors, Ltd, commonly known as Hino, is a Japanese manufacturer of commercial vehicles and diesel engines (including those for trucks, buses and other vehicles) headquartered in Hino, Tokyo. The company was established in 1942 as a corporate spin-off from previous manufacturers.Hino Motors is a large constituent of the Nikkei 225 on the Tokyo Stock Exchange. It is a subsidiary of Toyota and one of 16 major companies of the Toyota Group.
+
+
+Hino Tuck Series:--> 200,300,500,700,XL. Hino BUS Series:--> Hino115,Hino GB,Hino Ak,Hino RM,Hino Rk,Hino RM
+----------------------
+Founding Date :1942
+Founder:Bus & Truck
+Total Employee : 34231
+
+
+IMran HAsan
+
+//
