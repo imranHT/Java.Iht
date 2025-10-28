@@ -1,0 +1,136 @@
+package Super;
+
+import java.util.ArrayList;
+
+public class Bro35 {
+    public static void main(String[] args) {
+        System.out.println("--------------------------------------------------------------");
+       Club club = new Club("CSE Robotics and ioT Club", "--CRIC Prime Unuversity");
+
+       club.showName();
+       System.out.println("\n");
+
+
+       ArrayList<Comitee>comitees = new ArrayList<>(); //Multiple user details...Array
+
+       comitees.add(new Comitee("Shiekh--","Hosen--", "President", 59));
+       comitees.add(new Comitee("Rohul Amin--", "Fahad--", "Vise President", 62));
+       comitees.add(new Comitee("Imran--", "Hasan--", "General Secretary", 62));
+       comitees.add(new Comitee("Rudra--", "Haldar--", "Organize Secretary", 63));
+       comitees.add(new Comitee("Muslim--", "Uddin--", "treasurer", 63));
+
+
+       System.out.println("Student Comitee Details:\n");
+       System.out.println("Name-----Batch------post");
+
+       for(Comitee s : comitees){
+        s.showDetails();
+       }
+    System.out.println("\n");
+
+    ArrayList<Organizer>organizers = new ArrayList<>();
+
+     organizers.add(new Organizer("Rezwona--", "Islam--", "Convenor"));
+     organizers.add(new Organizer("Rimon--", "Rohman--", "Adviser"));
+       organizers.add(new Organizer("Mhafuzur--", "Rahman--", "Adviser"));
+         organizers.add(new Organizer("Amlan joyti--", "Mandal--", "Adviser"));
+
+
+         System.out.println("Teacher's Panel Details:\n");
+         System.out.println("");
+
+         for(Organizer s:organizers){
+            s.showPost();
+         }
+
+
+
+
+    }
+    
+}
+//class Parent 
+package Super;
+
+public class Club {
+
+
+    String first;
+    String last;
+
+    Club(String first,String last){
+        this.first = first;
+        this.last = last;
+    }
+
+    void showName(){
+        System.out.println(this.first+ " " + this.last);
+    }
+
+}
+//subclass
+package Super;
+
+public class Comitee extends Club{
+
+String post;
+int batch;
+
+Comitee(String first,String last,String post,int batch){
+
+    super(first,last);//super class
+    this.post = post;//constructar
+    this.batch = batch;
+}
+
+void showDetails(){
+    System.out.println(this.first+" "+this.last+ " "+this.batch+" "+this.post);
+}
+    
+
+
+}
+//subclass
+package Super;
+
+public class Organizer extends Club{
+    
+    String teachersPost;
+
+
+    Organizer(String first,String last,String teacherPost){
+
+
+      super(first,last);//super class
+
+      this.teachersPost = teacherPost;
+
+    }
+    void showPost(){
+        System.out.println(this.first+ " "+ this.last+" "+this.teachersPost);
+    }
+}
+
+output
+
+--------------------------------------------------------------
+CSE Robotics and ioT Club --CRIC Prime Unuversity
+
+
+Student Comitee Details:
+
+Name-----Batch------post
+Shiekh-- Hosen-- 59 President
+Rohul Amin-- Fahad-- 62 Vise President
+Imran-- Hasan-- 62 General Secretary
+Rudra-- Haldar-- 63 Organize Secretary
+Muslim-- Uddin-- 63 treasurer
+
+
+Teacher's Panel Details:
+
+
+Rezwona-- Islam-- Convenor
+Rimon-- Rohman-- Adviser
+Mhafuzur-- Rahman-- Adviser
+Amlan joyti-- Mandal-- Adviser
