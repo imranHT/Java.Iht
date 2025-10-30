@@ -1,0 +1,65 @@
+package Overriding;
+
+public class Bro36 {
+    public static void main(String[] args) {
+        
+          
+           Toyota toyota = new Toyota();
+           Honda honda = new Honda();
+           Tesla tesla = new Tesla();
+
+
+
+           toyota.country();
+           honda.country();
+           tesla.country();
+        }
+    
+}
+
+//Parant class
+
+package Overriding;
+
+public class Car {
+
+ void country(){
+    System.out.println("This Car From Japan");
+  }
+    
+}
+// child class
+
+package Overriding;  // Value are taking from parant class as a child
+
+public class Toyota extends Car{
+    
+}
+// Child
+
+package Overriding;
+
+public class Honda extends Car{
+    
+}
+
+//child class
+
+package Overriding;
+
+public class Tesla extends Car{
+   
+   @Override
+
+   void country(){
+    System.out.println("This Car from America"); //Overriding method..All are same but some time child class are change from gender and issue
+   }
+    
+}
+
+output:
+This Car From Japan
+This Car From Japan
+This Car from America
+
+
