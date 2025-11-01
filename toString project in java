@@ -1,0 +1,60 @@
+package ToString;
+
+public class Bro37 {
+    public static void main(String[] args) {
+        
+
+       Watch watch1 = new Watch("Rolex", "Daytona", 1988, "Silver-Gold", 175000);
+       Watch watch2 = new Watch("Patek Philippe", "Nautilus", 2006, "Silver", 33710);
+       Watch watch3 = new Watch("Richard Mille", "RM 113", 2018, "Black-Gray",191500);
+
+
+       System.out.println("\n");
+       System.out.println(watch1);
+       System.out.println("\n");
+       System.out.println(watch2);
+       System.out.println("\n");
+       System.out.println(watch3);
+       System.out.println("\n");
+    }
+    
+}
+//Class
+
+package ToString;
+
+public class Watch {
+    
+String brand;
+String model;
+int releaseYear;
+String color;
+double price;
+
+
+Watch(String brand,String model,int releaseYear,String color,double price){
+
+    this.brand = brand;
+    this.model = model;
+    this.releaseYear = releaseYear;
+    this.color = color;
+    this.price = price;
+}
+@Override
+
+public String toString(){
+    return this.brand+ " |-:Model :-" +this.model+ " |-:First Release :- " +this.releaseYear+ " |-:Color :- " +this.color+ " |-:Price  :"+this.price;
+}
+
+}
+
+
+//output
+
+Rolex |-:Model :-Daytona |-:First Release :- 1988 |-:Color :- Silver-Gold |-:Price  :175000.0
+
+
+Patek Philippe |-:Model :-Nautilus |-:First Release :- 2006 |-:Color :- Silver |-:Price  :33710.0
+
+
+Richard Mille |-:Model :-RM 113 |-:First Release :- 2018 |-:Color :- Black-Gray |-:Price  :191500.0
