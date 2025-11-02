@@ -1,0 +1,108 @@
+package Abstraction;
+
+public class Bro38 {
+
+    public static void main(String[] args) {
+        
+        Circle circle = new Circle(5);
+        Triangle triangle = new Triangle(4, 7);
+        Rectangle rectangle = new Rectangle(6, 7);
+
+
+
+       circle.display();
+        triangle.display();
+        rectangle.display();
+
+
+        System.out.println(circle.area());
+        System.out.println(triangle.area());
+        System.out.println(rectangle.area());
+    }
+    
+}
+
+
+//class
+
+package Abstraction;
+
+public abstract class Shape {
+
+    abstract double area();
+
+
+    void display(){
+        System.out.println("This is a shape");
+    }
+    
+}
+
+
+//class
+
+package Abstraction;
+
+public class Circle extends Shape{
+
+    double radius;
+
+    Circle(double redious){
+        this.radius = redious;
+    }
+
+    @Override
+    double area(){
+        return Math.PI * radius * radius;
+    }
+    
+}
+
+//class
+package Abstraction;
+
+public class Triangle  extends Shape{
+
+
+    double base;
+    double height;
+
+
+    Triangle(double base, double height){
+        this.base = base;
+        this.height = height;
+    }
+
+    @Override
+
+    double area(){
+        return 0.5 * base * height;
+    }
+    
+}
+
+//class
+
+
+package Abstraction;
+
+public class Rectangle extends Shape{
+
+
+  double length;
+  double width;
+
+
+  Rectangle (double length,double width){
+    this.length = length;
+    this.width = width;
+  }
+
+  @Override
+
+  double area(){
+    return length*width;
+  }
+    
+}
+
