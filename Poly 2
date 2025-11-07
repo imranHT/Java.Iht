@@ -1,0 +1,123 @@
+package Polymorphism;
+
+public class Bro37 {
+    public static void main(String[] args) {
+        
+
+      Bus bus = new Bus();
+      Car car = new Car();
+      CNG cng = new CNG();
+
+
+      Vehicle[] vehicles = {bus,car,cng};
+
+System.out.println("\n");
+      for(Vehicle vehicle : vehicles){
+        vehicle.go();
+      }
+      System.out.println("\n");
+      for(Vehicle vehicle: vehicles){
+        vehicle.feels();
+      }
+ System.out.println("\n");
+      for(Vehicle vehicle:vehicles){
+        vehicle.totalPassenger();
+      }
+
+
+    }
+}
+package Polymorphism;
+
+public  abstract class Vehicle {
+
+    abstract void go();
+
+    abstract void feels();
+
+    abstract void totalPassenger();
+
+    
+    
+}
+package Polymorphism;
+
+public class Car extends Vehicle{
+
+    @Override
+
+    void go(){
+        System.out.println("Car is moving");
+    }
+
+    @Override
+    void feels(){
+        System.out.println("Car : Feeling very Good ");
+    }
+
+    @Override
+
+    void totalPassenger(){
+        System.out.println("Car: Only 4 passanger can travel");
+    }
+}
+package Polymorphism;
+
+public class Bus extends Vehicle{
+
+    @Override
+
+    void go(){
+        System.out.println("Traveling in a Bus");
+    }
+
+    @Override
+
+    void feels(){
+        System.out.println("Bus: Not a Good Felling.To much passenger");
+    }
+
+    void totalPassenger(){
+        System.out.println("Bus : In bus there intotal 40 passenger can travel ");
+    }
+}
+  package Polymorphism;
+
+public class CNG extends Vehicle{
+
+    @Override
+
+    void go(){
+        System.out.println("Mini Traveling ");
+    }
+    @Override
+    void feels(){
+        System.out.println("CNG : To much Risk.But ok");
+    }
+
+    @Override
+    void totalPassenger(){
+        System.out.println("CNG : In Cng only 5 people can travel");
+    }
+   
+}
+
+//output
+
+Traveling in a Bus
+Car is moving
+Mini Traveling 
+
+
+Bus: Not a Good Felling.To much passenger
+Car : Feeling very Good 
+CNG : To much Risk.But ok
+
+
+Bus : In bus there intotal 40 passenger can travel 
+Car: Only 4 passanger can travel
+CNG : In Cng only 5 people can travel
+
+
+
+
