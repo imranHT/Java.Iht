@@ -1,0 +1,114 @@
+package Runtimepoly;
+
+import java.util.Scanner;
+
+public class Bro38 {
+
+    public static void main(String[] args) {
+        
+     Scanner imran = new Scanner(System.in);
+
+     Car car;
+
+     System.out.println("Which Car Information you Want ? (1 = Nissan, 2 = Lamborgini, 3 = Toyota):-> ");
+
+     int choice = imran.nextInt();
+
+     if(choice == 1){
+        car = new Nissan();
+        car.model();
+        car.power();
+        car.topSpeed();
+     }
+     else if(choice == 2){
+        car = new Lamborgini();
+        car.model();
+         car.power();
+         car.topSpeed();
+    }
+    else if(choice == 3){
+        car = new Toyota();
+        car.model();
+        car.power();
+        car.topSpeed();
+    }
+      
+    imran.close();
+    }
+    
+}
+package Runtimepoly;
+
+public abstract class Car {
+    
+   abstract void model();
+
+    abstract void power();
+
+    abstract void topSpeed();
+
+
+}
+package Runtimepoly;
+
+public class Nissan extends Car {
+
+    @Override
+    void model() {
+        System.out.println("Nissan GTR");
+    }
+
+    @Override
+    void power() {
+        System.out.println("Engine power : - Nissan GTR has 600 HP");
+    }
+
+    @Override
+    void topSpeed(){
+        System.out.println("Top Speed : - GTR top speed is 315 km/h");
+    }
+}
+package Runtimepoly;
+
+public class Lamborgini extends Car{
+    @Override
+    void model() {
+        System.out.println("Lamborgini Huracan ");
+    }
+
+    @Override
+    void power() {
+        System.out.println("Engine power : - Huracan EVO 631 HP");
+    }
+
+    @Override
+    void topSpeed(){
+        System.out.println("Top Speed : - Huracan Evo top Speed is 325 km/h");
+    }
+    
+}
+package Runtimepoly;
+
+public class Toyota extends Car{
+    
+@Override
+    void model() {
+        System.out.println("Toyota  Supra ");
+    }
+
+    @Override
+    void power() {
+        System.out.println("Engine power : - Toyota Supra 255 hp");
+    }
+
+    @Override
+    void topSpeed(){
+        System.out.println("Top Speed : - Toyota Supra Top Speed 250 km/h");
+    }
+
+}
+//output
+
+Nissan GTR
+Engine power : - Nissan GTR has 600 HP
+Top Speed : - GTR top speed is 315 km/h
