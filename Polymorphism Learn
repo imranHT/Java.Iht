@@ -1,0 +1,67 @@
+package Polymorphism;
+
+public class Bro37 {
+    public static void main(String[] args) {
+        
+
+        Car car = new Car();
+        Bus bus = new Bus();
+        CNG cng = new CNG();
+
+
+        
+
+        Vehicle[] vehicles = {car,bus,cng};
+
+
+        for(Vehicle vehicle : vehicles){
+            vehicle.go();
+        }
+    }
+}
+
+//parent Class
+package Polymorphism;
+
+public  abstract class Vehicle {
+
+    abstract void go();
+    
+}
+
+package Polymorphism;
+
+public class Car extends Vehicle{
+    
+
+    @Override
+    void go(){
+        System.out.println("You Drive a Car");
+    }
+}
+package Polymorphism;
+
+public class Bus extends Vehicle{
+    
+    @Override
+
+    void go(){
+        System.out.println("You Traveling in a bus");
+    }
+}
+package Polymorphism;
+
+public class CNG extends Vehicle{
+    
+    @Override
+
+    void go(){
+        System.out.println("You making a CNG");
+    }
+}
+
+//output
+
+You Drive a Car
+You Traveling in a bus
+You making a CNG
