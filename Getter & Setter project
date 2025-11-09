@@ -1,0 +1,71 @@
+package Gettersetter;
+
+public class Bro39 {
+    public static void main(String[] args) {
+        
+    
+
+
+        Add add = new Add("Imran","Talukdar", 23,"Sirajgong");
+
+        System.out.println(add.getName()+" "+add.getTitle()+" "+add.getAge()+" "+add.getLocation());
+
+        add.setName("Nabil");
+        add.setTitle("Talukdar");
+        add.setAge(22);
+
+
+        System.out.println(add.getName()+" "+add.getTitle()+" "+add.getAge()+" "+add.getLocation());
+
+    }
+}
+package Gettersetter;
+
+public class Add{
+    
+ private String name;
+ private String title;
+ private int age;
+ private String location;
+
+
+ Add(String name,String title,int age,String location){
+    this.name = name;
+    this.title = title;
+    this.age = age;
+    this.location = location;
+ }
+
+ String getName(){
+    return this.name;
+
+ }
+ String getTitle(){
+    return this.title;
+ }
+ int getAge(){
+    return this.age;
+ }
+
+ String getLocation(){
+    return this.location;
+ }
+
+ void setName(String name){
+    this.name = name;
+ }
+ void setAge(int age){
+    this.age = age;
+ }
+
+ void setTitle(String title){
+    this.title = title;
+ }
+ 
+}
+
+
+//output
+
+Imran Talukdar 23 Sirajgong
+Nabil Talukdar 22 Sirajgong
