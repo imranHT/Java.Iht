@@ -1,0 +1,105 @@
+package Gettersetter;
+
+public class Bro39 {
+    public static void main(String[] args) {
+        
+    System.out.println("\n");
+    System.out.println("Pagani Automobili");
+    System.out.println("HQ - : San Cesario sul Panaro, near Modena, Italy.");
+    System.out.println("\n");
+
+      Car car = new Car("Pagani Zondra", "Manual 6 gear", 780, 1273455667, "Horacio Pagani", "Mercedes-Benz AMG", 8.25);
+
+
+      System.out.println(car.getCarModel()+" |Gear type :"+ car.getTransmissionType()+ "-| Engine HP :" +car.getEngineHp()+"HP"+"-| Engine Code :"+ car.getEngineCode()+ "-|Car Designer :"+ car.getCarDesigner()+"-| Engine Manufacturer :"+car.getEngineManufacturer()+ "-| Car Price $:"+car.getPrice()+" Million");
+
+      System.out.println("\n");
+
+        car.setCarModel("Pagani Utopia");
+        car.setEngineHp(864);
+        car.setEngineCode(1474455333);
+        car.setPrice(11.00);
+
+      System.out.println(car.getCarModel()+" |Gear type :"+ car.getTransmissionType()+ "-| Engine HP :" +car.getEngineHp()+"HP"+"-| Engine Code :"+ car.getEngineCode()+ "-|Car Designer :"+ car.getCarDesigner()+"-| Engine Manufacturer :"+car.getEngineManufacturer()+ "-| Car Price $:"+car.getPrice()+" Million");
+
+
+      System.out.println("IMran hasan ");
+    }
+}
+
+package Gettersetter;
+
+public class Car{
+    
+   private String carModel;
+  private String transmissionType;
+   private int engineHp;
+  private int engineCode;
+  private String CarDesigner;
+  private String engineManufacturer;
+  double price;
+
+
+  Car(String carModel,String transmissionType,int engineHp,int engineCode,String CarDesiner,String engineManufacturer,double price){
+
+   this.carModel = carModel;
+   this.transmissionType = transmissionType;
+   this.engineHp = engineHp;
+   this.engineCode = engineCode;
+   this.CarDesigner = CarDesiner;
+   this.engineManufacturer = engineManufacturer;
+   this.price = price;
+  }
+
+  String getCarModel(){
+   return this.carModel;
+  }
+String getTransmissionType(){
+   return this.transmissionType;
+}
+int getEngineHp(){
+   return this.engineHp;
+}
+int getEngineCode(){
+   return this.engineCode;
+}
+
+String getCarDesigner(){
+   return this.CarDesigner;
+}
+String getEngineManufacturer(){
+   return this.engineManufacturer;
+
+}
+double getPrice(){
+   return this.price;
+}
+
+void  setCarModel(String carModel){
+    this.carModel = carModel;
+}
+void setEngineHp(int engineHp){
+   this.engineHp = engineHp;
+}
+void setEngineCode(int engineCode){
+   this.engineCode = engineCode;
+}  
+void setPrice(double price){
+   this.price = price;
+}
+
+ 
+}
+
+//output
+
+
+Pagani Automobili
+HQ - : San Cesario sul Panaro, near Modena, Italy.
+
+
+Pagani Zondra |Gear type :Manual 6 gear-| Engine HP :780HP-| Engine Code :1273455667-|Car Designer :Horacio Pagani-| Engine Manufacturer :Mercedes-Benz AMG-| Car Price $:8.25 Million
+
+
+Pagani Utopia |Gear type :Manual 6 gear-| Engine HP :864HP-| Engine Code :1474455333-|Car Designer :Horacio Pagani-| Engine Manufacturer :Mercedes-Benz AMG-| Car Price $:11.0 Million
+IMran hasan 
