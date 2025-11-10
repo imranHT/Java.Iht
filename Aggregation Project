@@ -1,0 +1,101 @@
+package Aggregation;
+
+public class Bro40 {
+
+    public static void main(String[] args) {
+     
+System.out.println("\n");
+        Book book1 = new Book("Book Name :Patar Chhaya ", 160, "   Writer Name : Humayun Ahmed");
+         Book book2 = new Book("Book Name :Bisher Banshi ", 150, "  Writer Name :  Kazi Nazrul Islam");
+          Book book3 = new Book("Book Name :Devdas", 180  , "          Writer Name : Sarat Chandra Chattopadhyay");
+           Book book4 = new Book("Book Name :Sonar Tori", 120 , "      Writer Name : Rabindranath Tagore");
+            Book book5 = new Book("Book Name :Kapalkundala", 200, "    Writer Name : Bankim Chandra Chattopadhyay");
+             Book book6 = new Book("Book Name :Aranyak", 220 , "         Writer Name : Bibhutibhushan Bandopadhyay");
+              Book book7 = new Book("Book Name :Lalsalu ", 150, "        Writer Name : Syed Waliullah");
+               Book book8 = new Book("Book Name :Daye Naye", 170  , "       Writer Name : Sunil Gangopadhyay");
+
+
+         Book[] books = {book1,book2,book3,book4,book5,book6,book7,book8};
+         
+           
+        Library library = new Library("Bangladesh National Library", 1973,"Sher-e-Bangla Nagar, Agargaon, Dhaka, Bangladesh",books,500000);//Aggregation
+
+
+        library.displayInfo();
+
+    }
+
+package Aggregation;
+
+public class Book {
+
+   String title;
+   int page;
+   String writer;
+
+
+   Book (String title, int page,String writer){
+    this.title = title;
+    this.page = page;
+    this.writer = writer;
+   }
+
+   String displayInfo(){
+   return this.title + " " + this.writer+ "  ("+ this.page+ " pages)";
+   }
+    
+}
+
+}
+
+package Aggregation;
+
+public class Library {
+
+  String libraryName;
+  int year;
+  String location;
+int totalBooks;
+  
+ Book[] books;
+
+  Library(String libraryName,int year,String location,Book[] books,int totalBooks){
+    this.libraryName = libraryName;
+    this.year = year;
+    this.location =  location;
+    this.totalBooks = totalBooks;
+   
+    this.books = books;
+  }
+
+
+  void displayInfo(){
+
+    System.out.println("The "+this.libraryName+ "  "+this.year+ "  "+ this.location+ " . Total Books : "+this.totalBooks);
+System.out.println("\n");
+    System.out.println("Books Available::");
+    System.out.println("\n");
+    for(Book book : books){
+        System.out.println(book.displayInfo());
+    }
+  }
+
+    
+}
+
+//output
+
+The Bangladesh National Library  1973  Sher-e-Bangla Nagar, Agargaon, Dhaka, Bangladesh . Total Books : 500000
+
+
+Books Available::
+
+
+Book Name :Patar Chhaya     Writer Name : Humayun Ahmed  (160 pages)
+Book Name :Bisher Banshi    Writer Name :  Kazi Nazrul Islam  (150 pages)
+Book Name :Devdas           Writer Name : Sarat Chandra Chattopadhyay  (180 pages)
+Book Name :Sonar Tori       Writer Name : Rabindranath Tagore  (120 pages)
+Book Name :Kapalkundala     Writer Name : Bankim Chandra Chattopadhyay  (200 pages)
+Book Name :Aranyak          Writer Name : Bibhutibhushan Bandopadhyay  (220 pages)
+Book Name :Lalsalu          Writer Name : Syed Waliullah  (150 pages)
+Book Name :Daye Naye        Writer Name : Sunil Gangopadhyay  (170 pages)
