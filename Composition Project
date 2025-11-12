@@ -1,0 +1,98 @@
+package Composition;
+
+public class Bro41 {
+    
+public static void main(String[] args) {
+    
+
+  Company company = new Company("Brain Station 23", 2015, "Banani,Dhaka",
+   "Software & IT company", "Software Engineear", "Imran hasan", 2026, 50000.00);
+
+System.out.println("\n");
+   System.out.println("Company Name: "+company.companyName);
+   System.out.println("Founding Date :"+company.openningYear);
+   System.out.println("Location :"+company.location);
+   System.out.println("Company Type: "+company.title);
+
+   System.out.println("\n"); 
+   System.out.println("Employee Name :"+company.employee.name);
+   System.out.println("Post :"+company.employee.type);
+   System.out.println("Joining Date :"+company.employee.joiningDate);
+   System.out.println("Current Salary :"+company.employee.salary);
+
+System.out.println("\n");
+
+company.Environment();
+
+System.out.println("\n");
+
+}
+}
+
+package Composition;
+
+public class Company {
+
+ String companyName;
+   int openningYear;
+   String location;
+   String title;
+   Employee employee;
+
+
+   Company(String companyName,int openningYear,
+   String location,String title,String type,String name,int joiningDate,double salary){
+
+       this.companyName = companyName;
+       this.openningYear = openningYear;
+       this.location = location;
+       this.title = title;
+       this.employee = new Employee(type,name,joiningDate,salary);
+}
+
+
+  void Environment(){
+    this.employee.feeling();
+    System.out.println("The "+ this.companyName + " is One of the leading company in bangladesh");
+  }
+}
+package Composition;
+
+public class Employee {
+
+      String type;
+      String name;
+      int joiningDate;
+      double salary;
+
+
+      Employee(String type,String name,int joiningDate,double salary){
+        this.type = type;
+        this.name = name;
+        this.joiningDate = joiningDate;
+        this.salary = salary;
+
+      }
+
+      void feeling(){
+        System.out.println("I feel very honored to joining the post "+this.type+ " in this Company ");
+      }
+
+   }
+
+//output
+
+Company Name: Brain Station 23
+Founding Date :2015
+Location :Banani,Dhaka
+Company Type: Software & IT company
+
+
+Employee Name :Imran hasan
+Post :Software Engineear
+Joining Date :2026
+Current Salary :50000.0
+
+
+I feel very honored to joining the post Software Engineear in this Company 
+The Brain Station 23 is One of the leading company in bangladesh
