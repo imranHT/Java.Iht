@@ -1,0 +1,63 @@
+package Composition;
+
+public class Bro41 {
+    
+public static void main(String[] args) {
+    
+
+ 
+    Car car = new Car("BMW M4", 2024, "V8 twine turbo");
+
+
+
+    System.out.println(car.model);
+    System.out.println(car.year);
+    System.out.println(car.engine.type);
+
+
+    car.start();
+}
+}
+package Composition;
+
+public class Car {
+
+  String model;
+  int year;
+  Engine engine;
+    
+
+  Car(String model,int year,String engineType){
+    this.model = model;
+    this.year = year;
+    this.engine = new Engine(engineType);
+  }
+
+  void start(){
+    this.engine.start();
+    System.out.println("The "+this.model+" is running");
+  }
+}
+package Composition;
+
+public class Engine {
+
+    String type;
+
+    Engine (String type){
+        this.type = type;
+    }
+
+    void start(){
+        System.out.println("You start the "+this.type+ " engine");
+    }
+    
+}
+
+// output
+BMW M4
+2024
+V8 twine turbo
+You start the V8 twine turbo engine
+The BMW M4 is running 
+
