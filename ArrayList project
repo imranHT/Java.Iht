@@ -1,0 +1,62 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Bro41{
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+
+        ArrayList<String>phoneNames = new ArrayList<>();
+        ArrayList<Double>phonePrice = new ArrayList<>();
+
+
+        System.out.println("Enter How many Phone you want: ");
+        int count = imran.nextInt();
+        imran.nextLine();
+
+
+
+        for(int i = 0; i<count; i++){
+            System.out.println("Enter phone" +i+ "Name :");
+            String name = imran.nextLine();
+            phoneNames.add(name);
+
+
+            System.out.println("Enter price of " +name+ ": ");
+            double price = imran.nextInt();
+            phonePrice.add(price);
+            imran.nextLine();
+        }
+
+        System.out.println("-------Cart-----------");
+        double totalPrice = 0;
+
+        for(int i = 0; i<count; i++){
+            System.out.println((i+1)+" . "+phoneNames.get(i)+" - "+phonePrice.get(i));
+            totalPrice += phonePrice.get(i);
+        }
+        System.out.println("\n Total Phone : "+count);
+        System.out.println("Total Price : "+totalPrice);
+
+
+        imran.close();
+    }
+}
+
+//output
+
+Enter How many Phone you want: 
+2
+Enter phone0Name :
+vivo
+Enter price of vivo: 
+70000
+Enter phone1Name :
+iqoo
+Enter price of iqoo: 
+90000
+-------Cart-----------
+1 . vivo - 70000.0
+2 . iqoo - 90000.0
+
+ Total Phone : 2
