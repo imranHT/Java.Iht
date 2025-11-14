@@ -1,0 +1,82 @@
+import java.util.ArrayList;
+
+
+public class Bro41{
+    public static void main(String[] args) {
+        
+       ArrayList<Integer>list= new ArrayList<>();
+
+       list.add(3);
+       list.add(4);
+       list.add(6);
+       list.add(8);
+
+       System.out.println("Integer numbers: " +list);
+
+       System.out.println("\n");
+
+       ArrayList<Double>list2 = new ArrayList<>();
+
+
+       list2.add(3.14);
+       list2.add(4.32);
+       list2.add(9.8);
+
+
+       System.out.println("Double numbers :"+list2);
+
+       System.out.println("\n");
+
+       ArrayList<String>fruits = new ArrayList<>();
+
+       fruits.add("Apple");
+       fruits.add("Mango");
+       fruits.add("BAnana");
+       fruits.add("Guava");
+
+
+       System.out.println("String "+fruits);
+
+       System.out.println("\n");
+
+       ArrayList<Float>temp = new ArrayList<>();
+
+       temp.add(32.5f);
+       temp.add(42.2f);
+       temp.add(12.0f);
+
+       System.out.println("Float numbers "+temp);
+
+
+
+       System.out.println("\n");
+
+       ArrayList<Character>aplha = new ArrayList<>();
+
+       aplha.add('A');
+       aplha.add('E');
+       aplha.add('I');
+       aplha.add('O');
+       aplha.add('U');
+
+
+       System.out.println("Characters :"+aplha);
+    }
+}
+
+//output
+
+
+Integer numbers: [3, 4, 6, 8]
+
+
+Double numbers :[3.14, 4.32, 9.8]
+
+
+String [Apple, Mango, BAnana, Guava]
+
+
+Float numbers [32.5, 42.2, 12.0]
+
+
+Characters :[A, E, I, O, U]
