@@ -1,0 +1,28 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Bro42 {
+    public static void main(String[] args) {
+
+        try (Scanner imran = new Scanner(System.in)) {
+            System.out.println("Enter a Number :");
+            int number = imran.nextInt();
+            System.out.println(number);
+
+        } catch (InputMismatchException e) {
+            System.out.println("That wasn't a number!");
+
+        } 
+        catch(ArithmeticException e){
+            System.out.println("you can't divide bt zero");
+        }
+        
+        
+        catch (Exception e) {
+            System.out.println("Something went wrong");
+
+        } finally {
+            System.out.println("This always executes");
+        }
+    }
+}
