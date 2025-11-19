@@ -1,0 +1,22 @@
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
+public class Bro42{
+    public static void main(String[] args) {
+        
+
+       try(FileWriter writer= new FileWriter("/home/imran/Desktoptest.txt")){
+         writer.write("I like you");
+         System.out.println("File has been written");
+       }
+       catch(FileNotFoundException e){
+        System.out.println("Could not locate file location");
+       }
+       catch(IOException e){
+        System.out.println("Could not write file");
+
+       }
+    }
+}
