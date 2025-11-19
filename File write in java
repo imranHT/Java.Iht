@@ -7,7 +7,7 @@ public class Bro42{
     public static void main(String[] args) {
         
 
-       try(FileWriter writer= new FileWriter("/home/imran/Desktoptest.txt")){
+       try(FileWriter writer= new FileWriter("test.txt")){
          writer.write("I like you");
          System.out.println("File has been written");
        }
