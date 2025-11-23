@@ -1,74 +1,71 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Bro43 {
-  public static void main(String[] args) {
-    
 
-    String word = "pizza";
+public class Bro43{
+    public static void main(String[] args) {
+        
 
-    Scanner imran = new Scanner(System.in);
-    ArrayList<Character> wordState = new ArrayList<>(); 
-    int wrongGuesses = 0;
- 
+        String word = "imran";
 
-    for(int i = 0; i<word.length(); i++){
-        wordState.add('-');
-    }
- System.out.println("***********************");
- System.out.println("WElcome to java hangnam");
- System.out.println("************************");
+        Scanner imran = new Scanner(System.in);
 
- while(wrongGuesses < 6){
+        ArrayList<Character> wordState = new ArrayList<>();
+         int wrongGuesses = 0;
 
 
-System.out.print(getHangmanArt(wrongGuesses));
+         for(int i = 0; i< word.length();i++){
+            wordState.add('-');
+         }
 
-    System.out.print("Word: ");
+         System.out.println("-----------------");
+         System.out.println(" Hangman Game ");
+         System.out.println("Let start the game : ");
+         System.out.println("-----------------");
 
- for(char c : wordState){
-    System.out.print(c+ " ");
+         while(wrongGuesses < 6){
+            System.out.print(getHangmanArt(wrongGuesses));
 
- }
- System.out.println();
- System.out.print("Guess a leter : ");
- char guess  = imran.next().toLowerCase().charAt(0);
+            System.out.println("Name is -:- ");
 
-if(word.indexOf(guess) >= 0){
-    System.out.println("Correct guess!\n");
-    for(int i = 0; i<word.length();i++){
-        if(word.charAt(i)== guess){
-            wordState.set(i,guess);
+            for(char c : wordState){
+                System.out.print(c+ " ");
+            }
 
+           System.out.println();
+           System.out.print("Guess a letter : ");
+           char guess = imran.next().toLowerCase().charAt(0);
+           
+           if(word.indexOf(guess) >= 0){
+            System.out.println("Correct guess !\n");
+            for(int i = 0; i<word.length(); i++){
+                if(word.charAt(i)== guess){
+                    wordState.set(i,guess);
+                }
+            }
+
+            if(!wordState.contains('-')){
+                System.out.print(getHangmanArt(wrongGuesses));
+                System.out.println("You win");
+                System.out.println("The name is  : "+word);
+                break;
+            }
+           }
+        else{
+            wrongGuesses++;
+            System.out.println("Wrong guess!");
         }
-    }
-    if(!wordState.contains('-')){
-        System.out.print(getHangmanArt(wrongGuesses));
-        System.out.println("You win");
-        System.out.println("The word was : "+word);
-        break;
-    }
 
-}
-else{
-    wrongGuesses++;
-    System.out.println("Wrong guess!");
-
- }
- }
-
- if(wrongGuesses >= 6){
+         }
+if(wrongGuesses >= 6){
     System.out.print(getHangmanArt(wrongGuesses));
     System.out.println("Game Over");
-    System.out.println("The word was :"+word);;
- }
+    System.out.println("The word was : "+word);
+}
 
-imran.close();
-
-
-  }   
-
-      static String getHangmanArt(int wrongGuesses){
+     imran.close();
+    }
+       static String getHangmanArt(int wrongGuesses){
 
         return switch(wrongGuesses){
             case 0 -> """
@@ -108,5 +105,5 @@ imran.close();
                       """;
             default -> "";
         };
-  }
+    }
 }
