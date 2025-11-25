@@ -1,0 +1,38 @@
+package Anonymousclass;
+
+public class Bro45 {
+    
+    public static void main(String[] args) {
+        
+     Car car1 = new Car();
+     Car car2 = new Car(){
+
+
+         @Override
+ //anonymous class
+         void sound(){
+            System.out.println("Nissan GTR car SKREEEEE VRRAAAOOOORRRRHHH");
+         }
+     };
+     car1.sound();
+     car2.sound();
+
+}
+}
+
+//sub class
+
+package Anonymousclass;
+
+public class Car {
+
+   
+    void sound(){
+        System.out.println("Lamborgini Avantador sound  SKREEEEE VRRRRRRROOOOOOAAAARRRR  KRRRRAAAAHHHHH!" );
+    }
+    
+}
+
+//output
+Lamborgini Avantador sound  SKREEEEE VRRRRRRROOOOOOAAAARRRR  KRRRRAAAAHHHHH!
+Nissan GTR car SKREEEEE VRRAAAOOOORRRRHHH
