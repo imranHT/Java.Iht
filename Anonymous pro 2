@@ -1,0 +1,54 @@
+package Anonymousclass;
+
+public class Bro45 { 
+    
+    public static void main(String[] args) {
+     
+        Car car = new Car();
+        Bike bike = new Bike();
+        Car car2 = new Car(){
+         
+ @Override
+
+ void topSpeed(){
+    
+    System.out.println("NIssan gtr top speed is 340 Kmph");
+ } 
+};
+
+
+        car.topSpeed();
+        System.out.println("");
+        bike.topSpeed();
+        System.out.println("");
+        car2.topSpeed();
+}
+}
+
+// sub class
+package Anonymousclass;
+
+public class Bike {
+    
+    void topSpeed(){
+        System.out.println("Royel Enfield 350cc Bike top speed is 150Kmph");
+    }
+}
+// sub class
+
+package Anonymousclass;
+
+public class Car {
+
+   void topSpeed(){
+    System.out.println("Lamborgini Avantador top speed is 350kmph");
+   }
+}
+
+//output
+
+Lamborgini Avantador top speed is 350kmph
+
+Royel Enfield 350cc Bike top speed is 150Kmph
+
+NIssan gtr top speed is 340 Kmph
