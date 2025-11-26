@@ -1,0 +1,29 @@
+import java.util.Timer;
+import java.util.TimerTask;
+
+
+public class Bro45{
+    public static void main(String[] args) {
+        
+
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask() {
+            
+            int count = 10;
+
+            @Override
+
+            public void run(){
+                System.out.println(count);
+                count--;
+
+                if(count <= 0){
+                    System.out.println("I am Imran.I am a DevDas ");
+                    timer.cancel();
+                }
+            }
+        };
+
+        timer.scheduleAtFixedRate(task, 0, 2000);
+    }
+}
