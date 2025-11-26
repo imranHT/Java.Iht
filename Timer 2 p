@@ -27,3 +27,58 @@ public class Bro45{
         timer.scheduleAtFixedRate(task, 0, 2000);
     }
 }
+
+
+// user input in terminal
+
+import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class Bro45{
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+
+        System.out.println("Enter a countdown number here : ");
+        int response = imran.nextInt();
+
+
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask() {
+            
+
+            int count  = response;
+
+            @Override
+
+            public void run(){
+                System.out.println(count);
+
+                count --;
+
+                if(count <= 0){
+                    System.out.println("I am imran .. a devdas ");
+                    timer.cancel();
+                }
+            }
+        };
+
+        timer.scheduleAtFixedRate(task, 0, 1000);
+        imran.close();
+    }
+}
+
+//output
+Enter a countdown number here : 
+9
+9
+8
+7
+6
+5
+4
+3
+2
+1
+I am imran .. a devdas 
