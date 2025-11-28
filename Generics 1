@@ -1,0 +1,44 @@
+package Generics;
+
+public class Bro46 {
+    public static void main(String[] args) {
+    
+
+        Pot<String,Integer>pot = new Pot<String,Integer>("Hammer", 500);
+          
+        System.out.println(pot.getItem());
+        System.out.println(pot.getPrice());
+    }
+    
+}
+
+package Generics;
+
+public class Pot<R,U> {
+
+    R resourse;
+    U price;
+
+
+    public Pot(R resourse, U price){
+        this.resourse = resourse;
+        this.price = price;
+    }
+
+
+    public R getItem(){
+        return this.resourse;
+    }
+   public U getPrice()
+    {
+    return this.price;
+    }
+ 
+    
+
+}
+
+//output
+Hammer
+500
+
