@@ -1,0 +1,89 @@
+package Generics;
+
+public class Bro46 {
+    public static void main(String[] args) {
+       
+      WorkerDetails<String,Integer,Integer,String,String,Double,String,String>workerDetails = new WorkerDetails<String,Integer,Integer,String,String,Double,String,String>
+      ("Imran Hasan", 24, 2003,"Sirajgong","Software Engineer", 50000.0, "Mirpur 10","Brain Station 23");
+
+
+      System.out.println(workerDetails.getName());
+      System.out.println(workerDetails.getAge());
+      System.out.println(workerDetails.getBirth());
+      System.out.println(workerDetails.getLocation());
+      System.out.println(workerDetails.getJob());
+      System.out.println(workerDetails.getSalary());
+      System.out.println(workerDetails.getLive());
+      System.out.println(workerDetails.getCompany());
+
+}
+}
+package Generics;
+
+public class WorkerDetails<N,A,B,L,J,S,C,K> {
+
+
+    N name;
+    A age;
+    B birth;
+    L location;
+    J job;
+    S salary;
+    K live;
+    C company;
+
+
+    public WorkerDetails(N name,A age,B birth,L location,J job,
+        S salary, K live,C company){
+
+            this.name = name;
+            this.age = age;
+            this.birth = birth;
+            this.location = location;
+            this.job = job;
+            this.salary = salary;
+            this.live=live;
+            this.company = company;
+            
+        }
+
+        public N getName(){
+            return this.name;
+        }
+        public A getAge(){
+            return this.age;
+        }
+        public B getBirth(){
+            return this.birth;
+        }
+        public L getLocation(){
+            return this.location;
+        }
+        public J getJob(){
+            return this.job;
+        }
+        public S getSalary(){
+            return this.salary;
+
+        }
+        public K getLive(){
+            return this.live;
+        }
+        public C getCompany(){
+            return this.company;
+        }
+       
+
+
+}
+
+
+//output
+Imran Hasan
+24
+2003
+Sirajgong
+Software Engineer
+50000.0
+Mirpur 10
+Brain Station 23
