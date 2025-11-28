@@ -1,44 +1,77 @@
 package Generics;
-
+// For single output
 public class Bro46 {
     public static void main(String[] args) {
-    
+        
 
-        Pot<String,Integer>pot = new Pot<String,Integer>("Hammer", 500);
-          
-        System.out.println(pot.getItem());
-        System.out.println(pot.getPrice());
+
+       
+Bio<String>bio = new Bio<>();
+bio.setName("Imran");
+System.out.println(bio.getName());
     }
     
 }
 
 package Generics;
 
-public class Pot<R,U> {
+public class Bio<N> {
+    N name;
 
-    R resourse;
-    U price;
-
-
-    public Pot(R resourse, U price){
-        this.resourse = resourse;
-        this.price = price;
+    public void setName(N name){
+        this.name = name;
+    }
+    public N getName(){
+        return name;
     }
 
-
-    public R getItem(){
-        return this.resourse;
-    }
-   public U getPrice()
-    {
-    return this.price;
-    }
- 
-    
+  
 
 }
 
-//output
-Hammer
-500
+-----------------------------------------------------------
+package Generics;
+//for multiple parpus
+public class Bro46 {
+    public static void main(String[] args) {
+        
 
+
+       
+
+ Bio<String,Integer,String> bio = new Bio<String,Integer,String>
+ ("Imran Hasan", 24, "Sirajgong");
+
+
+ System.out.println(bio.getName());
+ System.out.println(bio.getYear());
+ System.out.println(bio.getLocation());
+    }
+    
+}
+package Generics;
+
+public class Bio<N,Y,L> {
+
+    N name;
+    Y year;
+    L location;
+
+
+    public Bio( N name, Y year, L location){
+        this.name = name;
+        this.year = year;
+        this.location = location;
+    }
+
+    public N getName(){
+        return this.name;
+    }
+    public Y getYear(){
+        return this.year;
+    }
+    public L getLocation(){
+        return this.location;
+    }
+
+}
