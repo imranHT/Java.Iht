@@ -1,0 +1,38 @@
+import java.util.HashMap;
+
+
+
+public class Bro47{
+    public static void main(String[] args) {
+    
+        HashMap<String,Integer> map = new HashMap<>();
+
+        map.put("Imran", 23);
+        map.put("Rakibul", 23);
+        map.put("Saju", 24);
+        map.put("NAhid",23);
+        map.put("Sifat", 23);
+
+
+        //System.out.println( map.get("Saju"));
+       /*  if(map.containsKey("Imran")){
+            System.out.println(map.get("Imran"));
+        }
+        else{
+            System.out.println("Key not found");
+        }
+        */
+       
+        //System.out.println(map.containsKey("hasan"));
+
+       // System.out.println(map.containsValue(24));
+        
+      // System.out.println(map.size());
+
+     //System.out.println(map.remove("Imran"));
+System.out.println("Total Data::"+map.size());
+      for(String key:map.keySet()){
+        System.out.println(key+": $"+map.get(key));
+      }
+    }
+}
