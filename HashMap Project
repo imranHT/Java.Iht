@@ -1,0 +1,60 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Bro47{
+    public static void main(String[] args) {
+
+        Scanner imran = new Scanner(System.in);
+        HashMap<String,Integer> scoreboard = new HashMap<>();
+
+        while(true){
+            System.out.println("\n=== Game Scoreboard ===");
+            System.out.println("1. Update score");
+            System.out.println("2. Show Score");
+            System.out.println("3. Show All Players");
+            System.out.println("4. Exit");
+            System.out.print("Choose : ");
+            int choice = imran.nextInt();
+            imran.nextLine();
+
+            switch(choice){
+                case 1:
+                    System.out.print("Enter Player Name: ");
+                    String name= imran.nextLine();
+
+                    System.out.print("Enter score to add : ");
+                    int score = imran.nextInt();
+                    imran.nextLine(); 
+
+                    scoreboard.put(name,scoreboard.getOrDefault(name, 0)+score);
+                    System.out.println("Score updated!");
+                    break;
+
+                case 2:
+                    System.out.print("Enter player name : ");
+                    String hereName = imran.nextLine();
+
+                    if(scoreboard.containsKey(hereName)){
+                        System.out.println(hereName+ " Score : "+scoreboard.get(hereName));
+                    } else {
+                        System.out.println("Player not found");
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("Show All Players");
+                    for(String player : scoreboard.keySet()){
+                        System.out.println(player + " : "+ scoreboard.get(player));
+                    }
+                    break;
+
+                case 4:
+                    System.out.println("Thank's For update ");
+                    return;
+
+                default:
+                    System.out.println("Invalid Choice!");
+            }
+        }
+    }
+}
