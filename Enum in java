@@ -9,6 +9,7 @@ public class Bro48 {
 
 
         System.out.println(day);
+          System.out.println(day.getDayNumber());
     }
 }
 
@@ -73,3 +74,55 @@ public enum Day {
     
 }
 -----------------------------------------
+//User Input
+
+package Enum;
+
+import java.util.Scanner;
+
+public class Bro48 {
+    
+public static void main(String[] args) {
+        
+           Scanner imran = new Scanner(System.in);
+
+           System.out.println("Enter a day of the week");
+           String response = imran.nextLine().toUpperCase();
+
+
+           try{
+            Day day  = Day.valueOf(response);
+
+            switch(day){
+                case MONDAY,TUESDAY,WEDNESDAY,THURSDAY 
+                -> System.out.println("WOrking Day");
+
+                case FRIDAY,SATURDAY,SUNDAY->
+                System.out.println("Weekend man");
+            }
+           }
+           catch(IllegalArgumentException e){
+            System.out.println("Please Enter a valid day");
+           }
+
+           imran.close();
+    }
+}
+public enum Day {
+
+
+    SUNDAY(1), MONDAY(2), TUESDAY(3), WEDNESDAY(4),
+    THURSDAY(5), FRIDAY(6), SATURDAY(7);
+
+
+    private final int dayNumber;
+
+    Day(int dayNumber){
+        this.dayNumber = dayNumber;
+    }
+
+    public int getDayNumber(){
+        return this.dayNumber;
+    }
+    
+}
