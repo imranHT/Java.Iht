@@ -1,0 +1,48 @@
+// file fast and download process 
+package MassageThread;
+
+public class Bro49d {
+public static void main(String[] args) {
+    
+
+    new FastThread().start();
+    new SlowThread().start();
+}
+}
+package MassageThread;
+
+class SlowThread extends Thread{
+
+   public void run(){
+
+    for(int i =1; i<=5; i++){
+        System.out.println("Slow Thread here :"+i);
+
+
+        try{
+            Thread.sleep(300);
+        }
+        catch(Exception e){
+            
+        }
+    }
+   }
+}
+package MassageThread;
+
+class FastThread extends Thread{
+  
+
+    public void run(){
+        for(int i = 1; i<= 5; i++){
+            System.out.println("Fast Thread here : "+1);
+
+            try{
+                Thread.sleep(300);
+            }
+            catch(Exception e){
+
+            }
+        }
+    }
+}
