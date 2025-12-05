@@ -1,0 +1,55 @@
+package Threading;
+
+import java.util.Scanner;
+
+public class Bro49 {
+    
+public static void main(String[] args) {
+ 
+
+Scanner imran = new Scanner(System.in);
+
+
+Imranc imranc = new Imranc();
+Thread thread = new Thread(imranc);
+
+thread.setDaemon(true);
+thread.start();
+
+
+System.out.println("You have only 9 second to enter your text code ");
+String text = imran.nextLine();
+System.out.println("Hello . Welcome back....");
+
+
+}      
+}
+
+package Threading;
+
+public class Imranc implements Runnable{
+
+     @Override
+
+     public void run(){
+
+        for(int i = 0; i<=9; i++){
+            try{
+                Thread.sleep(1000);
+            }
+            catch(InterruptedException e){
+                System.out.println("Thread was interrupated");
+        
+            }
+
+
+            if(i==9){
+                System.out.println("Your time is up.Refresh again ");
+                System.exit(1);
+            }
+        }
+     }
+}
+
+
+
