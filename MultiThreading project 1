@@ -1,0 +1,72 @@
+package Multithreading;
+
+public class Bro50 {
+    public static void main(String[] args) {
+       
+
+        Thread thread1 = new Thread(new Jio("Hasan"));
+        Thread thread2  = new Thread(new Jio("Talukdar"));
+
+
+        System.out.println("Name game is start !(Imran)");
+
+        thread1.start();
+        thread2.start();
+
+
+        try{
+            thread1.join();
+            thread2.join();
+        }
+        catch(InterruptedException e){
+            System.out.println("Main therad was interrupted");
+        }
+
+        System.out.println("OK you have already find your fullname.The fullname is (Imran Hasan Talukdar)");
+    
+    }
+}
+
+
+package Multithreading;
+
+public class Jio implements Runnable{
+
+ private final String imran;
+
+ Jio(String imran){
+    this.imran = imran;
+ }
+
+ @Override
+
+ public void run(){
+
+    for(int i = 1; i<= 5; i++){
+
+        try{
+            Thread.sleep(1000);
+            System.out.println(imran);
+        }
+        catch(InterruptedException e){
+            System.out.println("Thread was Interrupted ");
+        }
+    }
+ }
+    
+}
+//output
+
+
+Name game is start !(Imran)
+Talukdar
+Hasan
+Talukdar
+Hasan
+Talukdar
+Hasan
+Talukdar
+Hasan
+Talukdar
+Hasan
+OK you have already find your fullname.The fullname is (Imran Hasan Talukdar)
