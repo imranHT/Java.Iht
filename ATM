@@ -1,61 +1,76 @@
+package Tresure;
 import java.util.Scanner;
 
-public class ATM4{
-    public static void main(String[]args){
+public class ATM {
+    public static void main(String[] args) {
+        
+        double balance =  500000;
+        int pin = 1212;
+        int enterdPin;
 
-    double balance = 150000;
-    int pin = 2222;
-    int enteredPin;
+        Scanner imran = new Scanner(System.in);
 
-    Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Enter your Pin");
-    enteredPin = scanner.nextInt();
+        System.out.println("Enter Your Pin");
+        enterdPin = imran.nextInt();
 
-    if(enteredPin == pin){
-        System.out.println("Pin is correct!");
-        System.out.println("1.Check Balance");
-        System.out.println("2.Deposite Money");
-        System.out.println("3.Withdraw Money");
-        System.out.println("4.Exit");
-        System.out.println("Choose a Option");
-int choice = scanner.nextInt();
-switch(choice){
 
-    case 1:
-    System.out.println("Your Balance is"+balance);
-    break;
+        if(enterdPin == pin){
+            System.out.println("Pin is correct!");
+            System.out.println("1.Check Balance");
+            System.out.println("2.Deposite Money");
+            System.out.println("3.Withdraw Money");
+            System.out.println("Choose a Option");
 
-    case 2:
-    System.out.println("Deposite money");
-    double deposite = scanner.nextDouble();
-    balance += deposite;
-    System.out.println("Deposite"+deposite+"New Balance is"+balance);
-    break;
 
-    case 3:
-    System.out.println("Withdraw money");
-    double withdraw = scanner.nextDouble();
-    if(balance<=withdraw){
-        System.out.println("Withdraw"+withdraw+"New Balance is"+balance);
+            int choice  = imran.nextInt();
+          switch(choice){
 
-    }else{
-        System.out.println("Insifficent funds");
+
+            case 1:
+                System.out.println("Your Balance is : $"+balance);
+                break;
+
+
+            case 2:
+                System.out.println("Deposite money");
+                double deposite  = imran.nextDouble();
+                balance += deposite;
+                System.out.println("Deposite :"+deposite+"New Balance is :"+balance);    
+                break;
+
+
+              case 3:
+                System.out.println("Withdraw money");
+                double withdaw = imran.nextDouble();
+                 balance -= withdaw;
+                if(balance <= withdaw){
+                  
+                    System.out.println("Withdraw"+withdaw+"new Balance is "+balance);
+                }
+                else{
+                    System.out.println("Insifficent Funds");
+                }
+                break;
+              
+                case 4:
+                    System.out.println("Take your amount.");
+                    break;
+
+                default:
+                    System.out.println("Invalid Option");
+
+          }
+
+          
+
+        }
+         else{
+            System.out.println("Incorrect Pin.Try againe");
+          }
+
+          imran.close();
     }
-    break;
-
-    case 4:
-    System.out.println("Thanks foe visiting");
-    break;
-
-    default:
-    System.out.println("Invalid option");
-}
-
-    }
-    else{
-        System.out.println("Incorrect pin");
-    }
-scanner.close();
-    }
+    
+    
 }
