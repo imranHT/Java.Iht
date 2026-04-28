@@ -1,0 +1,103 @@
+import java.util.Scanner;
+
+public class xoxo{
+    public static void main(String[] args) {
+        
+
+        Scanner imran = new Scanner(System.in);
+
+        double balance = 1000000.00;
+        int pin = 1212;
+        int enteredPin;
+        int attempts = 0;
+
+
+                 System.out.println("AB Bank");
+            System.out.println("Your all time partner");
+            System.out.println("-----------------------------");
+
+
+        while(attempts <3){
+            System.out.println("Enter your pin:");
+            enteredPin = imran.nextInt();
+
+            if(enteredPin == pin){
+                System.out.println("-----------------------");
+                System.out.println("Pin accepted");
+                System.out.println("Welcome to AB Bank ATM System");
+                System.out.println("------------------------");
+                break;
+            }else{
+                attempts++;
+            System.out.println("Invalid pin. try again"); 
+                   }
+        }
+
+        if(attempts == 3){
+            System.out.println("Card is blocked.");
+            imran.close();
+            return;
+        }
+        int choice;
+
+
+        do{
+
+            System.out.println("Menu Bar");
+            System.out.println("1.Check Balance");
+            System.out.println("2.deposite");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Exit");
+            System.out.println("Choose a option");
+
+            choice = imran.nextInt();
+
+            switch(choice){
+                case 1:
+                    System.out.println("Current balance:"+balance);
+                    break;
+
+                    case 2:
+                        System.out.println("Enter deposite amount:");
+                        double deposite = imran.nextDouble();
+
+                        if(deposite > 0){
+                            balance += deposite;
+                            System.out.println("Deposite Done");
+                            System.out.println("New Balance:"+balance);
+                        }else{
+                            System.out.println("Invalid deposite");
+                        }
+
+                        break;
+
+                     case 3:
+                        System.out.println("Enter Withdraw amount:");
+                        double withdraw = imran.nextDouble();
+                        
+                        if(withdraw > 0 && withdraw <= balance){
+                            balance -= withdraw;
+                            System.out.println("Withdraw Succesful");
+                            System.out.println("New Balance :"+balance);
+                        }else{
+                            System.out.println("Invalid Withdraw");
+                        }
+
+                        break;
+
+
+                     case 4:
+                        System.out.println("Thanks");
+                        break;
+                        
+                       default:
+                        System.out.println("Invalid Option");
+                    break; 
+            }
+        }
+        while(choice != 4);
+        imran.close();
+    }
+
+
+}
