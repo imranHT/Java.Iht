@@ -1,0 +1,28 @@
+import java.lang.*;
+public class Adv1{
+    public static void main(String[]args){
+
+
+  int myNumber = 345;
+
+  int yourNumber;
+  yourNumber = 323;
+
+        System.out.println(yourNumber);
+
+        float myFloat = 5.0f;
+        System.out.println(myFloat);
+
+        double myDouble = 6.767676;
+        System.out.println(myDouble);
+
+        String name = "Imran";
+        System.out.println(name);
+        char myFirst = 'i';
+        System.out.println(myFirst);
+
+        boolean isGood = true;
+        System.out.println(isGood);
+    }
+
+}
