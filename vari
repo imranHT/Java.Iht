@@ -34,8 +34,11 @@ public class Adv1{
         //System.out.println("Imran\bthe gg ");
 
         System.out.println("*\n* *\n* * *\n* * * *");
+
+        System.out.println("* * * * *\n* * * *\n* * *\n* *\n* ");
+
+        System.out.println("      *\n     * *\n    * * *\n   * * * *");
     }
 
 }
-
 
