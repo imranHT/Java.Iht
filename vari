@@ -42,3 +42,31 @@ public class Adv1{
 
 }
 
+
+import java.util.Scanner;
+
+public class Adv1{
+    public static void main(String[] args) {
+
+        Scanner imran = new Scanner(System.in);
+
+     String name;
+        System.out.println("Enter Your Name :");
+        name = imran.nextLine();
+        System.out.println("Welcome " +name+ " in the camp");
+
+        int firstNumber;
+        int secondNumber;
+        System.out.println("Enter First Number :");
+        firstNumber = imran.nextInt();
+        System.out.println("Enter Second Number :");
+        secondNumber = imran.nextInt();
+
+        int sum = firstNumber + secondNumber;
+
+        System.out.println("The Number is "+sum);
+
+
+    }
+}
+
