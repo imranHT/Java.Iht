@@ -26,3 +26,16 @@ public class Adv1{
     }
 
 }
+
+import java.lang.*;
+public class Adv1{
+    public static void main(String[]args){
+
+        //System.out.println("Imran\bthe gg ");
+
+        System.out.println("*\n* *\n* * *\n* * * *");
+    }
+
+}
+
+
