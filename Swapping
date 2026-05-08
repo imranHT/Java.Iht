@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+   Scanner imran = new Scanner(System.in);
+
+
+        System.out.println("Swapping Number Mode ::");
+
+        int a;
+        int b;
+
+        System.out.println("Enter the value of A :");
+           a = imran.nextInt();
+
+        System.out.println("Enter the value of B :");
+        b = imran.nextInt();
+
+        int c = a;
+        a = b;
+        b = c;
+
+        System.out.println("The Ans of A is "+a);
+        System.out.println("The Ans of B is "+b);
+
+
+
+        
+
+
+    }
+}
