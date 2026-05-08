@@ -70,3 +70,14 @@ public class Adv1{
     }
 }
 
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+
+//Order of Operation - Braket-Order-Divide-Multiply-Add-Subtract(working principle)
+        System.out.println(8/(4+3));
+
+
+    }
+}
