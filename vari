@@ -81,3 +81,49 @@ public class Adv2 {
 
     }
 }
+
+
+
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+
+        //unary operators
+
+        int a = 5;
+        int b = -a;
+        int c = -b;
+
+
+        System.out.println(c);
+
+
+        int x = 5;
+        x = x+1;
+        System.out.println(x);
+
+        x += 1;
+        System.out.println(x);
+
+        x++;
+        System.out.println(x);
+
+        System.out.println("Post increment");
+
+         int f = 10;
+        System.out.println(f++);
+        System.out.println(f);
+
+        System.out.println("Post Decrement");
+
+        int d = 12;
+        System.out.println(--d);
+        System.out.println(d);
+
+        System.out.println(d--);
+        System.out.println(d);
+
+
+    }
+}
