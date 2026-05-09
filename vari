@@ -280,3 +280,38 @@ public class Adv2 {
 
     }
 }
+
+
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+
+        Scanner imran = new Scanner(System.in);
+// create a program to calculate Compound interest   = P(1+R/100)t
+
+        System.out.println("Enter Your Name ");
+        String name = imran.nextLine();
+
+        System.out.println("Wellcome to the compound calculator ");
+
+        System.out.println("Enter Your Main Amount :");
+        int amount = imran.nextInt();
+
+        System.out.println("Tell me your rate of interest : ");
+        float rate = imran.nextFloat();
+
+        System.out.println("Enter how many year :");
+        float year = imran.nextFloat();
+
+
+        double comAmount = amount * Math.pow((1 + rate / 100 ),year);
+
+        System.out.println(name + " Your Compound Interest is  " +comAmount);
+    }
+}
+
+
+
