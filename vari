@@ -242,3 +242,41 @@ public class Adv2 {
 
     }
 }
+
+
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+
+        Scanner imran = new Scanner(System.in);
+
+
+        //Create a program to calculate simple interest. Compound interest = P(1+R/100)t
+
+
+        System.out.println("Welcome To AB Bank");
+
+        System.out.println("Please Enter Your Name :" );
+        String name = imran.nextLine();
+
+        System.out.println("Please Enter Your Main Amount : ");
+        int amount = imran.nextInt();
+
+        System.out.println("Tell me your Rate of Interest :" );
+        float rate  = imran.nextFloat();
+
+        System.out.println("How many year you want : ");
+        float year = imran.nextFloat();
+
+        float interest = (amount * rate * year)/100;
+
+        System.out.println(name +" You will take " +interest+ " TK as interset ");
+
+
+
+
+    }
+}
