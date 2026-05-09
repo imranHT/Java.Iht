@@ -212,3 +212,33 @@ public class Adv2 {
         System.out.println("The Perimeter Rectange Value is == "+perimeter);
     }
 }
+
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+
+        Scanner imran = new Scanner(System.in);
+ // Create a program to calculate the Area of a Triangle area = 0.5*base*hight;
+
+        System.out.println("Hello .Welcome to the Area Calculator");
+
+        double base;
+        double height;
+
+        System.out.println("Enter the Base  :");
+        base = imran.nextDouble();
+
+        System.out.println("Enter the Height :");
+        height = imran.nextDouble();
+
+
+        double area = 0.5 * base * height;
+
+        System.out.println("The Area is  = "+area);
+
+
+    }
+}
