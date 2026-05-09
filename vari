@@ -127,3 +127,39 @@ public class Adv2 {
 
     }
 }
+
+
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+
+        Scanner imran = new Scanner(System.in);
+
+        System.out.println("Welcome to the Arithmetic Operator Calculator ::");
+
+        int firstNum ;
+        int secondNum ;
+
+        System.out.println("Enter First Number :");
+        firstNum = imran.nextInt();
+        System.out.println("Enter Second Number :");
+        secondNum = imran.nextInt();
+
+
+        int add = firstNum + secondNum;
+        int sub = firstNum - secondNum;
+        int mul = firstNum * secondNum;
+        int div = firstNum / secondNum;
+        int mod = firstNum % secondNum;
+
+
+        System.out.println("Addition Number is = "+add);
+        System.out.println("Subtraction Number is = "+sub);
+        System.out.println("Multiplication Number is  = "+mul);
+        System.out.println("Division Number is  = "+div);
+        System.out.println("Modulation Number is  = "+mod);
+        System.out.println("Thank's for using");
+
+    }
+}
