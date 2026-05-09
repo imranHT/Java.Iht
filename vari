@@ -188,3 +188,27 @@ public class Adv2 {
         System.out.println("Addition value is " +(a + b));
     }
 }
+
+
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+
+        Scanner imran = new Scanner(System.in);
+// Create a program to calculate perimeter of a rectangle. ABCD = A+B+C+D;
+
+
+        System.out.println("Welcome Let's make a Perimeter of a Rectangle");
+        System.out.println("Please enter the values :");
+
+        double A = imran.nextDouble();
+        double B = imran.nextDouble();
+        double C = imran.nextDouble();
+        double D = imran.nextDouble();
+
+        double perimeter = A+B+C+D;
+
+        System.out.println("The Perimeter Rectange Value is == "+perimeter);
+    }
+}
