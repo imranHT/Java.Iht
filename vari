@@ -163,3 +163,28 @@ public class Adv2 {
 
     }
 }
+
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+
+        Scanner imran = new Scanner(System.in);
+
+        System.out.println("Welcome to the Float Multiplication Calculator");
+
+        double a;
+        double b;
+
+        System.out.println("Enter the value of a :");
+        a= imran.nextDouble();
+
+        System.out.println("Enter the value of b : ");
+        b = imran.nextDouble();
+
+
+        System.out.println("The Value is "+a*b);
+
+        System.out.println("Addition value is " +(a + b));
+    }
+}
