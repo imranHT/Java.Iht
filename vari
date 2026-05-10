@@ -357,3 +357,40 @@ public class Adv2 {
 
     }
 }
+
+
+
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+        System.out.println("Hello Can you Inter your Name : ");
+        String name = imran.nextLine();
+
+
+       boolean isBusDriver = false;
+       boolean isPilot = false;
+       boolean isCarDriver = false;
+       boolean isCapten = false;
+
+
+       if(isPilot){
+           System.out.println(name+ " is a pilot");
+       }
+       else if(isCarDriver){
+           System.out.println(name+  " is a car driver");
+       }
+       else if(isBusDriver){
+           System.out.println(name+ " is a bus driver");
+       }
+       else if(isCapten){
+           System.out.println(name+ " is a capten ");
+       }
+       else {
+           System.out.println(name+" is a IT Officer");
+       }
+
+    }
+}
