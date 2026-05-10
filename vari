@@ -477,3 +477,25 @@ public class Adv2 {
 
     }
 }
+
+
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+        System.out.println("Even Odd Calculator :: ");
+
+        System.out.println("Enter The Number Here : ");
+        int number = imran.nextInt();
+
+
+        if(number % 2 == 0){
+            System.out.println("This is a even Number ");
+        }
+        else {
+            System.out.println("Odd Number Man");
+        }
+    }
+}
