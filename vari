@@ -332,3 +332,28 @@ public class Adv2 {
     }
 }
 
+
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+
+        boolean isImran = true;
+        String name;
+
+        System.out.println("Enter Your Name:");
+        name = imran.nextLine();
+
+        if(isImran){
+
+            System.out.println("Hello Imran How are you?");
+
+        }
+        else{
+            System.out.println("Who are You? ");
+        }
+
+    }
+}
