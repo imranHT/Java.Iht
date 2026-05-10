@@ -418,3 +418,35 @@ public class Adv2 {
 
     }
 }
+
+
+
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+
+        System.out.println("NOVO Air");
+        System.out.println("Welcome To the event . Grab your Discount ");
+        System.out.println("Enter Your Name :");
+        String name = imran.nextLine();
+        System.out.println("Enter Your Age :");
+        int age = imran.nextInt();
+        System.out.println("What is Your Gender (Male/Female):");
+         Boolean isFemale = imran.nextBoolean();
+
+         if(age < 5){
+             System.out.println("You Got 65% Discount :: ");
+         } else if (isFemale) {
+             System.out.println("You Got 50% Discount ::");
+         } else if (age < 25 && !isFemale) {
+             System.out.println("You Got 30% Discount :: ");
+         }
+         else {
+             System.out.println("You Got 10% Discount ::");
+         }
+        System.out.println("Thanks For Choosing NOVO Air . Happy Journey:: ");
+    }
+}
