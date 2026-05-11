@@ -552,3 +552,47 @@ public class Adv2 {
         }
     }
 }
+
+
+
+
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+
+        System.out.println("Grade Checking Site");
+        System.out.println("Enter Your name : ");
+        String name = imran.nextLine();
+        System.out.println("Enter Your Department:");
+        String department = imran.nextLine();
+        System.out.println("Enter Your Batch Number :");
+        int batch = imran.nextInt();
+        System.out.println("Enter your ID number (4 digit) :");
+        int id = imran.nextInt();
+        System.out.println("Enter your percentage:");
+        float percentage = imran.nextFloat();
+
+        if(percentage >= 80){
+            System.out.println("Your grade is A+");
+        } else if (percentage >= 70) {
+            System.out.println("Your grade is A");
+
+        } else if (percentage >= 60) {
+            System.out.println("Your grade is B");
+
+        } else if (percentage >= 50) {
+            System.out.println("Your grade is C");
+        } else if (percentage >= 45) {
+            System.out.println("Your grade is D");
+
+        }
+        else {
+            System.out.println("You fail is the exam. Your result is not matching with any grade ");
+        }
+
+
+    }
+}
