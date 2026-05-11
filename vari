@@ -596,3 +596,35 @@ public class Adv2 {
 
     }
 }
+
+
+
+
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+
+        System.out.println("Age Calculator");
+
+        System.out.println("Enter your age : ");
+        int age  = imran.nextInt();
+
+
+        if(age >= 60){
+            System.out.println("Your are a old citizen");
+        } else if (age >= 35) {
+            System.out.println("You are a adult citizen");
+        }
+        else if (age >= 20){
+            System.out.println("You are a teen age citizen");
+        }
+        else {
+            System.out.println("You are a Child . Drink Milk");
+        }
+
+
+    }
+}
