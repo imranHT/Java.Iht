@@ -528,3 +528,27 @@ public class Adv2 {
           }
     }
 }
+
+
+
+
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+        System.out.println("Leap year calculator :: ");
+
+        System.out.println("Enter a Year for checking leap year or not : ");
+        int year = imran.nextInt();
+
+
+        if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)){
+            System.out.println("Your year is a leap year ");
+        }
+        else {
+            System.out.println("Your year is not a leap year");
+        }
+    }
+}
