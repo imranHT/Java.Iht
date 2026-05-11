@@ -628,3 +628,26 @@ public class Adv2 {
 
     }
 }
+
+
+
+
+import java.util.Scanner;
+public class Adv2 {
+
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+
+
+        System.out.println("Showing Bitwise And Operator");
+        System.out.println("Enter First Number : ");
+        int firstNumber = imran.nextInt();
+        System.out.println("Enter Second Number :");
+        int secondNumber = imran.nextInt();
+
+
+        int result =   firstNumber & secondNumber;
+
+        System.out.println("The Result is : "+result);
+    }
+}
