@@ -695,3 +695,25 @@ public class Adv2 {
 
     }
 }
+
+import java.util.Scanner;
+
+public class Adv2{
+    public static void main(String[] args) {
+     Scanner imran = new Scanner(System.in);
+        System.out.println("Even and Odd Calculator with Bitwise Operator ");
+
+
+        System.out.println("Enter  a number : ");
+        int num = imran.nextInt();
+
+
+        if((num &1) == 1){
+            System.out.println("Odd number");
+        }
+        else {
+            System.out.println("Even number");
+        }
+    }
+}
+
