@@ -704,7 +704,7 @@ public class Adv2{
         System.out.println("Even and Odd Calculator with Bitwise Operator ");
 
 
-        System.out.println("Enter  a number : ");
+        System.out.println("Enter a number : ");
         int num = imran.nextInt();
 
 
