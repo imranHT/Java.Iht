@@ -717,3 +717,37 @@ public class Adv2{
     }
 }
 
+
+import java.util.Scanner;
+
+public class Adv2{
+    public static void main(String[] args) {
+
+
+
+//        int number = 1;
+//
+//        while (number <= 10){
+//            System.out.println(number);
+//            number = number + 1;
+      //  }
+
+//        int num = 500;
+//        while(num >= 200){
+//            System.out.println(num);
+//            num = num -1;
+      //  }
+
+        Scanner imran  = new Scanner(System.in);
+
+        int i = 0;
+        while(i<5){
+            int inp = imran.nextInt();
+            System.out.println("Number is :"+inp);
+            i = i+1;
+        }
+
+
+
+    }
+}
