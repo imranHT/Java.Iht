@@ -674,3 +674,24 @@ public class Adv2 {
         System.out.println("The Result is : "+result);
     }
 }
+
+
+
+import java.util.Scanner;
+
+
+public class Adv2 {
+
+    public static void main(String[] args) {
+
+        Scanner imran  = new Scanner(System.in);
+
+        System.out.println("Left Shift / right Shift");
+        int num = imran.nextInt();
+
+        //int result = num << 1;
+        int result = num >> 1;
+        System.out.println("Your result is "+result);
+
+    }
+}
