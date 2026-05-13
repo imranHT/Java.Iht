@@ -1,0 +1,54 @@
+public class Adv2{
+    public static void main(String[] args) {
+
+
+        System.out.println("Pattern Star");
+
+        firstNumber();
+        System.out.println();
+        secondNumber();
+    }
+
+
+    public static void firstNumber(){
+
+
+
+
+        int row = 0;
+
+        while(row < 5){
+            System.out.println("*");
+            int i = 0;
+            while(i < row){
+                System.out.println(" *");
+                i++;
+            }
+            System.out.println();
+            row++;
+        }
+    }
+
+
+    public static void secondNumber(){
+
+
+
+        int row = 5;
+
+        while(row > 0){
+            System.out.println("*");
+
+            int i = 0;
+            while(i < row){
+                System.out.println("* ");
+                i++;
+            }
+            System.out.println();
+            row--;
+        }
+
+    }
+
+
+}
