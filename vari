@@ -751,3 +751,35 @@ public class Adv2{
 
     }
 }
+
+
+
+public class Adv2{
+    public static void main(String[] args) {
+
+
+        System.out.println("Hello let's call some function ");
+
+        firstImran();
+        secondImran();
+        goodBye();
+
+        System.out.println("Thanks . that's all  are call function calling");
+    }
+
+    public static void firstImran(){
+        System.out.println("This is the first One ");
+    }
+
+    public static void secondImran(){
+        System.out.println("This is the second one");
+    }
+
+    public static void goodBye(){
+        System.out.println("Thanks for watching");
+    }
+
+
+
+}
+
