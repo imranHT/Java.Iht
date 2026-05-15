@@ -52,3 +52,35 @@ public class Problems{
         return sum;
     }
 }
+
+
+//write a function that calculates the factorial of a given number;
+
+import java.util.Scanner;
+public class Problems{
+    public static void main(String[] args) {
+
+
+        Scanner imran = new Scanner(System.in);
+        System.out.println("Factorial calculator");
+        System.out.println("Enter a number : ");
+        int num = imran.nextInt();
+        long fact = factorial(num);
+        System.out.println("Factorial is " +fact);
+    }
+
+    public static long factorial(int num){
+
+        if(num < 2){
+            return 1;
+
+        }
+        long fact = 1;
+        int i = 2;
+        while(i <= num){
+            fact *= i;
+            i++;
+        }
+        return fact;
+    }
+}
