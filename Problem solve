@@ -1,0 +1,26 @@
+//Develop a program that prints the multiplication table for a given number::
+
+import java.util.Scanner;
+public class Problems{
+    public static void main(String[] args) {
+
+
+        Scanner imran = new Scanner(System.in);
+
+        System.out.println("Welcome to the Multiple calculator");
+        System.out.println("Enter a Number here : ");
+        int number = imran.nextInt();
+        printMultiplicationNumber(number);
+
+    }
+
+   public static void printMultiplicationNumber(int number){
+
+        int i = 1;
+        while(i<=10){
+            System.out.println(number + " X " + i + " = " + (number*i));
+
+            i++;
+        }
+   }
+}
