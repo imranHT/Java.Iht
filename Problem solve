@@ -110,3 +110,37 @@ class Problems{
     }
 
 }
+
+
+//Create a program to find the Least Common Multiple (LCM) of two numbers
+
+
+import java.util.Scanner;
+public class Problems{
+    public static void main(String[] args) {
+
+
+        Scanner imran  = new Scanner(System.in);
+        System.out.println("Least Common multiple calculator");
+        System.out.println("Enter firstN  :");
+        int first = imran.nextInt();
+        System.out.println("Enter secondN  :");
+        int second = imran.nextInt();
+
+        int lcm = lcm(first,second);
+        System.out.println("LCM value is "+lcm);
+    }
+
+
+    public static int lcm(int first,int second){
+        int i = 1;
+        while(true){
+            int factor = first * i;
+            if(factor % second == 0){
+                return factor;
+            }
+            i++;
+        }
+    }
+
+}
