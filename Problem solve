@@ -84,3 +84,29 @@ public class Problems{
         return fact;
     }
 }
+
+//Create a problem that computes the sum of the digits of an integer;
+
+import java.util.Scanner;
+class Problems{
+    public static void main(String[] args) {
+
+        Scanner imran = new Scanner(System.in);
+        System.out.println("Welcome to Sum of digits calculator");
+        System.out.println("Enter a Number : ");
+        int num = imran.nextInt();
+        int sum = sumOfDigits(num);
+        System.out.println("The value is "+sum);
+
+    }
+
+    public static int sumOfDigits(int num){
+        int sum = 0;
+        while(num > 0){
+            sum += num % 10;
+            num /= 10;
+        }
+        return sum;
+    }
+
+}
