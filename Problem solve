@@ -168,7 +168,7 @@ class Problems{
         int i = 2;
         int least = least(num1,num2);
         while(i <= least){
-            if(num1%i == 0 && num2%i == 0){
+            if(num1 % i == 0 && num2 % i == 0){
                 gcd  = i;
             }
             i++;
