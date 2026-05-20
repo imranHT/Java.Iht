@@ -185,3 +185,36 @@ class Problems{
         }
     }
 }
+
+//Create a program to check whether a given number is prime
+import java.util.Scanner;
+
+class Problems{
+    public static void main(String[] args) {
+Scanner imran = new Scanner(System.in);
+
+        System.out.println("Welcome to Prime Number checker");
+        System.out.println("Enter a valid number : ");
+        int num = imran.nextInt();
+
+        boolean isPrime = isPrime(num);
+        if(isPrime){
+            System.out.println("Prime Number Man");
+        }
+        else{
+            System.out.println("Not a Prime number . try another number vodai..");
+        }
+
+    }
+
+    public static boolean isPrime(int num){
+        int i = 2;
+        while(i < num ){
+            if(num % i == 0){
+                return false;
+            }
+            i++;
+        }
+        return true;
+    }
+}
