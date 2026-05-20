@@ -241,3 +241,36 @@ class Problems{
         return newNum;
     }
 }
+
+
+//Create a program to print the Fibonacci series up to a certain number
+import java.util.Scanner;
+class Problems{
+    public static void main(String[] args) {
+
+        Scanner imran  = new Scanner (System.in);
+        System.out.println("Welcome..Let's find some Fibonacci number:");
+        System.out.println("Enter valid number : ");
+        int num = imran.nextInt();
+        System.out.println("Here is the fibonacci serise");
+        printFibonacci(num);
+    }
+    public static void printFibonacci(int num){
+        if(num < 0) return;
+        System.out.println("0 ");
+        if(num == 0) return;
+        System.out.println("1  ");
+
+
+        int first = 0, second = 1;
+        while(first + second <= num){
+            int third  = first + second;
+            System.out.println(third+" ");
+            first = second;
+            second = third;
+        }
+
+    }
+}
+
+
