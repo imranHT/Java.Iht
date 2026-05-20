@@ -218,3 +218,26 @@ Scanner imran = new Scanner(System.in);
         return true;
     }
 }
+
+//Create a program to reverse the digits of a number
+import java.util.Scanner;
+class Problems{
+    public static void main(String[] args) {
+        Scanner imran = new Scanner(System.in);
+        System.out.println("Reverse Number Checker");
+        System.out.println("Enter a Valid Number here : ");
+        int num = imran.nextInt();
+        int reverse = reveres(num);
+        System.out.println("The Number is " + reverse);
+    }
+
+    public static int reveres(int num){
+        int newNum = 0;
+        while(num > 0){
+            int digit = num % 10;
+            newNum = newNum * 10 + digit;
+            num = num / 10;
+        }
+        return newNum;
+    }
+}
