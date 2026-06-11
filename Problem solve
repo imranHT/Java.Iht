@@ -337,3 +337,71 @@ class Problems{
     }
     }
 }
+
+
+import java.util.Scanner;
+class Problems{
+    public static void main(String[] args) {
+
+
+        Scanner imran = new Scanner(System.in);
+        System.out.println("Hello let's make a patterns");
+        System.out.println("Enter a number here : ");
+        int rows = imran.nextInt();
+
+  printFirstPattern(rows);
+  reverseHalfPyramid(rows);
+  sidePyramid(rows);
+
+    }
+
+    public static void reverseHalfPyramid(int maxRows){
+
+        System.out.println("Reverse pyramid ");
+        int rows = maxRows;
+        while(rows > 0){
+            int  i  = 0;
+            while(i < rows){
+                System.out.print("* ");
+                i++;
+            }
+            System.out.println();
+            rows--;
+        }
+    }
+
+    public  static void sidePyramid(int maxRows){
+        System.out.println("Side pyramid");
+        int rows = maxRows;
+        while(rows > 0){
+
+            int j = 0;
+            while(j < rows){
+                System.out.print(" ");
+                j++;
+            }
+            int i = 0;
+            while( i <= (maxRows-rows)){
+                System.out.print("* ");
+                i++;
+            }
+            System.out.println();
+            rows--;
+        }
+    }
+
+    public static  void printFirstPattern(int maxRows){
+        System.out.println("Pyramid");
+    int rows = 0;
+    while(rows < maxRows){
+        System.out.print("*");
+        int i = 0;
+        while(i<rows){
+            System.out.print(" *");
+            i++;
+        }
+        System.out.println();
+        rows++;
+    }
+    }
+}
