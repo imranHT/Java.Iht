@@ -309,4 +309,31 @@ public class Problems{
     }
 }
 
+import java.util.Scanner;
+class Problems{
+    public static void main(String[] args) {
 
+
+        Scanner imran = new Scanner(System.in);
+        System.out.println("Hello let's make a patterns");
+        System.out.println("Enter a number here : ");
+        int rows = imran.nextInt();
+
+  printFirstPattern(rows);
+
+    }
+
+    public static  void printFirstPattern(int maxRows){
+    int rows = 0;
+    while(rows < maxRows){
+        System.out.print("*");
+        int i = 0;
+        while(i<rows){
+            System.out.print(" *");
+            i++;
+        }
+        System.out.println();
+        rows++;
+    }
+    }
+}
