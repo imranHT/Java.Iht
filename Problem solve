@@ -274,3 +274,39 @@ class Problems{
 }
 
 
+//Create a program to verify if a number palindrome number or not
+
+ import java.util.Scanner;
+public class Problems{
+    public static void main(String[] args) {
+
+   Scanner imran = new Scanner(System.in);
+        System.out.println("Welcome to the Palindrome Number Finder . ");
+        System.out.println("Enter a Valid Number : ");
+        int num = imran.nextInt();
+        boolean isPalindrome = isPalindrome(num);
+        if(isPalindrome){
+            System.out.println("The Number is Palindrome");
+        }
+        else {
+            System.out.println("The Number is not Palindrome");
+        }
+    }
+
+    public static boolean isPalindrome(int num){
+
+        return num == reverse(num);
+    }
+
+    public static int reverse(int num){
+        int newNum = 0;
+        while(num > 0){
+            int digit  = num % 10;
+            newNum = newNum * 10 + digit;
+            num /= 10;
+        }
+        return newNum;
+    }
+}
+
+
