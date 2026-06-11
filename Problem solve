@@ -274,7 +274,7 @@ class Problems{
 }
 
 
-//Create a program to verify if a number palindrome number or not
+//Create a program to verify if a number palindrome number or not  ..
 
  import java.util.Scanner;
 public class Problems{
