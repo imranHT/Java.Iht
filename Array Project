@@ -52,3 +52,44 @@ public class Problems{
 
     }
 }
+
+
+import java.util.Scanner;
+class Problems{
+    public static void main(String[] args) {
+
+        Scanner imran = new Scanner(System.in);
+
+        String[] arr = {"Imran","Ifad","Borsha","Mehedi","Ashik","Mohammad","Tisha","Lamia"};
+        System.out.println("Welcome to Array Search for family members");
+        System.out.println("Enter a name :");
+        String name = imran.nextLine();
+
+        boolean isFound = isFound(arr,name);
+
+        if(isFound){
+            System.out.println("You are the family member:");
+        }
+        else {
+            System.out.println("You are the outsider not our family member");
+        }
+
+
+    }
+
+    public static boolean isFound(String[] arr, String name){
+
+        int index = 0;
+        while(index < arr.length){
+            if(arr[index].equals(name)){
+                return true;
+
+            }
+            index++;
+
+        }
+
+        return false;
+    }
+
+}
