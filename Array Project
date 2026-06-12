@@ -32,3 +32,23 @@ public class Problems{
 
     }
 }
+
+
+public class Problems{
+    public static void main(String[] args) {
+
+        String[] myArr = {"AG Global","Team Falcon","ThandarTalk Esport","JDG","Alter Ego ","Arora Esport"};
+
+        int index = 0;
+
+
+
+        while(index < myArr.length){
+            System.out.println(myArr[index]);
+            index++;
+        }
+
+
+
+    }
+}
