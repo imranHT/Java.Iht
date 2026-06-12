@@ -42,7 +42,7 @@ public class Problems{
         int index = 0;
 
 
-
+// array Travarsel
         while(index < myArr.length){
             System.out.println(myArr[index]);
             index++;
