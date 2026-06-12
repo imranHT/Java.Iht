@@ -115,3 +115,24 @@ class 2Darray{
     }
 
 }
+
+
+class Problems{
+    public static void main(String[] args) {
+
+
+        String[][] arr = {{"Imran,Mim,Ariba"},{"Mehedi,Tisha,Lamia"},{"Habib,Hafsa,Zarin"}};
+
+int i = 0;
+while(i<arr.length){
+    int j = 0;
+    while(j<arr[i].length){
+        System.out.print(arr[i][j]);
+        j++;
+    }
+
+    System.out.println();
+    i++;
+}
+    }
+}
