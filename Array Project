@@ -1,0 +1,34 @@
+public class Problems{
+    public static void main(String[] args) {
+
+        System.out.println("Array Using");
+        System.out.println("Esport team and there rank");
+        String[] myArr = new String[20];
+
+        myArr[0] = "Alpha 7 esport";
+        myArr[1] = "Arora Gaming";
+        myArr[2] = "4T Esport";
+        myArr[3] = "ULF Esport";
+        myArr[4] = "Horra Esport";
+        myArr[5] = "ThandarTalk Esport";
+        myArr[6] = "AG Global";
+        myArr[7] = "JDG";
+        myArr[8] = "Falcon Esport";
+        myArr[9] = "Alter Ego Esport";
+
+
+        System.out.println(myArr[6]);
+        System.out.println(myArr[8]);
+        System.out.println(myArr[1]);
+        System.out.println(myArr[7]);
+        System.out.println(myArr[3]);
+        System.out.println(myArr[9]);
+        System.out.println(myArr[1]);
+        System.out.println(myArr[3]);
+        System.out.println(myArr[2]);
+        System.out.println(myArr[4]);
+
+
+
+    }
+}
