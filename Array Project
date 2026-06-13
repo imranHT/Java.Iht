@@ -193,5 +193,57 @@ public class ArrayUtility {
 
 
 
+//Create a problem to find number of occurrences of an element in a array
+
+import java.util.Scanner;
+class Problems{
+    public static void main(String[] args) {
+
+
+        Scanner imran = new Scanner(System.in);
+        System.out.println("Welcome to Array Occurrences \n");
+        int[] numArr = ArrayUtility.inputArray();
+        System.out.println("Enter the number You want to see : ");
+        int num = imran.nextInt();
+        int occurrence = noOfOccurrence(numArr,num);
+        System.out.println("Your element was found "+occurrence+" time in the Database");
+
+    }
+    public static int noOfOccurrence(int[] numArr, int num){
+        int occ = 0;
+        int i = 0;
+        while(i<numArr.length){
+            if(numArr[i]==num){
+                occ++;
+            }
+            i++;
+        }
+        return occ;
+    }
+}
+
+
+//subclass
+import java.util.Scanner;
+
+public class ArrayUtility{
+    public static int[] inputArray(){
+
+        Scanner imran = new Scanner(System.in);
+
+        System.out.println("Please enter the size of array:");
+        int size = imran.nextInt();
+        int[] nums = new int[size];
+        int i = 0;
+        while(i<size){
+            System.out.println("Please enter elements no :"+(i+1)+": ");
+            nums[i] = imran.nextInt();
+            i++;
+        }
+        return nums;
+    }
+}
+
+
 
 
